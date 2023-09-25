@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --bg-color: #2E4535;
+        }
+        *{margin: 0;padding: 0;}
+        body{
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-color: var(--bg-color);
+            color: #eee;
+        }
+        nav{
+            background-color: red;
+            width: 25%;
+            max-width: 100px;
+            height: 100vh;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9;
+        }
+        .menu{
+            inset: 25px auto ;
+            border-radius: 50%;
+            position: absolute;
+            width: 65%;
+            aspect-ratio: 1 / 1;
+            background-color: plum;
+        }
+        ul{
+            width: 100%;
+            gap: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+        li{
+            background-color: green;
+            width: 65%;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 1 / 1;
+        }
+        a.inicio{
+            position: absolute;
+            inset: 92% auto;
+            font-size: 150%;
+            text-align: center;
+            letter-spacing: 2px;
+            width: 100%;
+            height: 50px;
+            color: #111;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        main{
+            align-self: flex-end;
+            width: calc(100% - 100px); 
+            height: 100vh;
+            overflow: auto;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 70px;
+        }
+        img{
+            width: 100%;
+            user-select: none;
+        }
+        .person__container{
+            max-width: 13rem;
+            margin-inline: auto;
+            border-radius: 0 0 100vh 100vh;
+            position: relative;
+            overflow: hidden;
+            transition: transform 300ms ease;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+       
+        .person__container:hover{
+            transform: scale(1.05);
+        }
+        .person__circle{
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: auto;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            object-fit: cover;
+            outline: 10px solid #3DAF5C;
+            outline-offset: -10px;
+        }
+        .person__img{
+            width: 130%;
+            position: relative;
+            margin-left: -20px;
+            transform: translateY(35px) scaleX(-1);
+            transition: transform 600ms;
+        }
+        .person__img:hover{
+            transform: translateY(5px) scaleX(-1);
+        }
+        .person__container::before{
+            content: 'Mateus Stofel Brito';
+            position: absolute;
+            inset: 0;
+            display: contents;
+            font-size: 1.5rem;
+        }
+        .person{
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .person::after{
+            content: 'Hover me';
+            font-family: monospace;
+            letter-spacing: 5px;
+            display: inline;
+            text-align: center;
+            translate: 0px 15px;
+            transition: opacity 300ms;
+            animation: mover .7s ease-in-out 0s infinite alternate;
+
+        }
+        @keyframes mover {
+            0%{
+                transform: translateY(-2px);
+            }
+            100%{
+                transform: translateY(2px);
+            }
+        }
+        .info{
+            position: absolute;
+            top: calc(100% + 20px);
+            height: auto;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            opacity: 0;
+            transform: translateY(-100px);
+            transition: transform 1s ease,
+             opacity .5s ease;
+        }
+        .info a{
+            width: 20%;
+        }
+        .person:hover .info{
+            opacity: 1;
+            transform: translateY(00px);
+        }
+        .person:hover::after{
+            opacity: 0;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="menu"></div>
+        <ul>
+            <li><a href="">A</a></li>
+            <li><a href="">B</a></li>
+            <li><a href="">C</a></li>
+            <li><a href="">D</a></li>
+        </ul>
+        <a href="#" class="inicio">início</a>
+    </nav>
+
+    <main>
+        <div class="person">
+            <div class="person__container">
+                <img class="person__circle" src="img/pexels-pixabay-459335.jpg" alt="" >
+                <img class="person__img" src="img/Our_image/태조_말랑말랑_메이커_-_n_eu-removebg-preview.png" alt="My image" >
+            </div>
+            <div class="info">
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/mStof"><img src="img/Logos/github_white_logo.png" alt="Github_icon"></a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/_mstofel/"><img src="img/Logos/instagram_logo.png" alt="Instagram_Icon"></a>
+                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/_Matt231"><img src="img/Logos/twitter_logo.png" alt="Twitter_icon"></a>
+                <a target="_blank" rel="noopener noreferrer" href="mailto:mateus.stofel.brito@gmail.com"><img src="img/Logos/Email_logo.png" alt="Email_icon"></a>
+                
+            </div>
+        </div>
+        <div class="person">
+            <div class="person__container">
+                <img class="person__circle" src="img/pexels-pixabay-459335.jpg" alt="" >
+                <img class="person__img" src="img/Our_image/태조_말랑말랑_메이커_-_n_eu-removebg-preview.png" alt="My image" >
+            </div>
+            <div class="info">
+                <a href="https://github.com/mStof"><img src="img/Logos/github_white_logo.png" alt="Github_icon"></a>
+                <a href="https://www.instagram.com/_mstofel/"><img src="img/Logos/instagram_logo.png" alt="Instagram_Icon"></a>
+                <a href="https://twitter.com/_Matt231"><img src="img/Logos/twitter_logo.png" alt="Twitter_icon"></a>
+                <a href="mailto:mateus.stofel.brito@gmail.com"><img src="img/Logos/Email_logo.png" alt="Email_icon"></a>
+            </div>
+        </div>
+        <div class="person">
+            <div class="person__container">
+                <img class="person__circle" src="img/pexels-pixabay-459335.jpg" alt="" >
+                <img class="person__img" src="img/Our_image/태조_말랑말랑_메이커_-_n_eu-removebg-preview.png" alt="My image" >
+            </div>
+            <div class="info">
+                <a href="https://github.com/mStof"><img src="img/Logos/github_white_logo.png" alt="Github_icon"></a>
+                <a href="https://www.instagram.com/_mstofel/"><img src="img/Logos/instagram_logo.png" alt="Instagram_Icon"></a>
+                <a href="https://twitter.com/_Matt231"><img src="img/Logos/twitter_logo.png" alt="Twitter_icon"></a>
+                <a href="mailto:mateus.stofel.brito@gmail.com"><img src="img/Logos/Email_logo.png" alt="Email_icon"></a>
+            </div>
+        </div>
+        <div class="person">
+            <div class="person__container">
+                <img class="person__circle" src="img/pexels-pixabay-459335.jpg" alt="" >
+                <img class="person__img" src="img/Our_image/태조_말랑말랑_메이커_-_n_eu-removebg-preview.png" alt="My image" >
+            </div>
+            <div class="info">
+                <a href="https://github.com/mStof"><img src="img/Logos/github_white_logo.png" alt="Github_icon"></a>
+                <a href="https://www.instagram.com/_mstofel/"><img src="img/Logos/instagram_logo.png" alt="Instagram_Icon"></a>
+                <a href="https://twitter.com/_Matt231"><img src="img/Logos/twitter_logo.png" alt="Twitter_icon"></a>
+                <a href="mailto:mateus.stofel.brito@gmail.com"><img src="img/Logos/Email_logo.png" alt="Email_icon"></a>
+            </div>
+        </div>
+        <div class="person">
+            <div class="person__container">
+                <img class="person__circle" src="img/pexels-pixabay-459335.jpg" alt="" >
+                <img class="person__img" src="img/Our_image/태조_말랑말랑_메이커_-_n_eu-removebg-preview.png" alt="My image" >
+            </div>
+            <div class="info">
+                <a href="https://github.com/mStof"><img src="img/Logos/github_white_logo.png" alt="Github_icon"></a>
+                <a href="https://www.instagram.com/_mstofel/"><img src="img/Logos/instagram_logo.png" alt="Instagram_Icon"></a>
+                <a href="https://twitter.com/_Matt231"><img src="img/Logos/twitter_logo.png" alt="Twitter_icon"></a>
+                <a href="mailto:mateus.stofel.brito@gmail.com"><img src="img/Logos/Email_logo.png" alt="Email_icon"></a>
+            </div>
+        </div>
+
+        
+    </main>
+
+    
+</body>
+</html>
