@@ -18,55 +18,6 @@
             background-color: var(--bg-color);
             color: #eee;
         }
-        nav{
-            background-color: red;
-            width: 25%;
-            max-width: 100px;
-            height: 100vh;
-            position: fixed;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 9;
-        }
-        .menu{
-            inset: 25px auto ;
-            border-radius: 50%;
-            position: absolute;
-            width: 65%;
-            aspect-ratio: 1 / 1;
-            background-color: plum;
-        }
-        ul{
-            width: 100%;
-            gap: 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            list-style: none;
-        }
-        li{
-            background-color: green;
-            width: 65%;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            aspect-ratio: 1 / 1;
-        }
-        a.inicio{
-            position: absolute;
-            inset: 92% auto;
-            font-size: 150%;
-            text-align: center;
-            letter-spacing: 2px;
-            width: 100%;
-            height: 50px;
-            color: #111;
-            font-family: Arial, Helvetica, sans-serif;
-        }
         main{
             align-self: flex-end;
             width: calc(100% - 100px); 
@@ -177,15 +128,49 @@
         
 
     </style>
+    <link rel="stylesheet" href="css/menu.css">
 </head>
 <body>
     <nav>
-        <div class="menu"></div>
-        <ul>
-            <li><a href="">A</a></li>
-            <li><a href="">B</a></li>
-            <li><a href="">C</a></li>
-            <li><a href="">D</a></li>
+        <div class="login"></div>
+        <ul class="menu">
+            <li><a href=""></a>
+                <ul class="subMenu">
+                    <li><a href="">Tópico1</a></li>
+                    <li><a href="">Tópico2</a></li>
+                    <li><a href="">Tópico3</a></li>
+                    <li><a href="">Tópico4</a></li>
+                    <img src="/Bastidores/img/pexels-pixabay-459335.jpg" alt="">
+                </ul>
+            </li>
+            <li><a href=""></a>
+                <ul class="subMenu">
+                    <li><a href="">Tópico5</a></li>
+                    <li><a href="">Tópico6</a></li>
+                    <li><a href="">Tópico7</a></li>
+                    <li><a href="">Tópico8</a></li>
+                    <img src="/Bastidores/img/pexels-pixabay-459335.jpg" alt="">
+                </ul>
+            </li>
+            <li><a href=""></a>
+                <ul class="subMenu">
+                    <li><a href="">Tópico9</a></li>
+                    <li><a href="">Tópico10</a></li>
+                    <li><a href="">Tópico11</a></li>
+                    <li><a href="">Tópico12</a></li>
+                    <img src="/Bastidores/img/pexels-pixabay-459335.jpg" alt="">
+                </ul>
+            </li>
+            <li><a href=""></a>
+                <ul class="subMenu">
+                    <li><a href="">Tópico13</a></li>
+                    <li><a href="">Tópico14</a></li>
+                    <li><a href="">Tópico15</a></li>
+                    <li><a href="">Tópico16</a></li>
+                    <img src="/Bastidores/img/pexels-pixabay-459335.jpg" alt="">
+                </ul>
+            </li>
+            
         </ul>
         <a href="#" class="inicio">início</a>
     </nav>

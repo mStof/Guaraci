@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
+:root{
+    --nav-bg:#1b3d27;
+    --nav-icon: #156922;
+    --sub-nav-bg: #3f5b2d;
+    --text-color: #eee;
+}
+
+nav{
+    background-color: var(--nav-bg);
+    width: 25%;
+    max-width: 100px;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    box-shadow: 3px 0px 10px 5px #00000030;
+
+}
+.login{
+    inset: 25px auto ;
+    border-radius: 50%;
+    position: absolute;
+    width: 65%;
+    aspect-ratio: 1 / 1;
+    background-color: var(--nav-icon);
+}
+ul{
+    width: 100%;
+    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+ul.menu > li{
+    background-color: var(--nav-icon);
+    width: 65%;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+
+}
+ul.menu > li:hover{
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+ul.menu > li:hover ul.subMenu{
+    transform: translateX(00px);
+
+}
+ul.subMenu{
+    background-color: var(--sub-nav-bg);
+    width: 100vw;
+    max-width: 700px;
+    font-size: 2rem;
+    border-radius: 0px 10px 10px 0px;
+    box-shadow: 10px 0px 10px 5px #00000030;
+
+    position: absolute;
+    inset: 0 0 0 100%;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-auto-flow: column;
+    
+
+    transform: translateX(-820px);
+    transition: transform 900ms ease-out;
+    z-index: -1;
+}
+ul.subMenu > li{
+    background-color: transparent;
+    margin: 50px;
+}
+ul.subMenu > li a {
+    color: var(--text-color);
+    text-decoration: none;  
+    font-size: 1.5rem;
+    
+    font-weight: 200;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    transition: padding 300ms, border-bottom 300ms;
+
+
+}
+ul.subMenu > li a:hover{
+    border-bottom: 2px solid var(--text-color);
+    font-weight: 400;
+    
+    padding: 0px 10px 5px 10px;
+}
+a.inicio{
+    position: absolute;
+    inset: 92% auto;
+    font-size: 150%;
+    text-align: center;
+    letter-spacing: 2px;
+    width: 100%;
+    height: 50px;
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul.subMenu img{
+    --tamanho: 250px;
+    max-width: var(--tamanho);
+    max-height: var(--tamanho);
+    
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    margin-right: 50px;
+    grid-area: 2 / 3 / span 2 / span 3;
+}
