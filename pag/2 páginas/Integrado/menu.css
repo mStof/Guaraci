@@ -1,3 +1,5 @@
+nav *{margin: 0;padding: 0;}
+body{margin: 0;padding: 0;}
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
 :root{
     --nav-bg:#1b3d27;
@@ -5,8 +7,42 @@
     --sub-nav-bg: #3f5b2d;
     --text-color: #eee;
 }
-
+input[type='checkbox']{
+    display: none;
+}
+label[for='check']{
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    inset: 20px 0px 0px 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+label[for='check'] div{
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+    border-radius: 20px;
+    transition: transform .5s ease;
+}
+input[type='checkbox']:checked ~ label div:first-child{
+    rotate: 45deg;
+    transform: translateY(15px) ;
+}
+input[type='checkbox']:checked ~ label div:nth-child(2){
+    opacity: 0;
+}
+input[type='checkbox']:checked ~ label div:last-child{
+    rotate: -45deg;
+    transform: translateY(-15px) ;
+    
+}
+input[type='checkbox']:checked ~ nav{
+    transform: translateX(0px);
+}
 nav{
+    align-self: flex-start;
     background-color: var(--nav-bg);
     width: 25%;
     max-width: 100px;
@@ -19,6 +55,9 @@ nav{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transform: translateX(-100%);
+    transition:transform .5s ease;
+    inset: 0;
 }
 /* Parte do login */
 .login{
@@ -31,17 +70,16 @@ nav{
     inset: 25px auto ;
 }
 /* Parte das lista principal */
-ul{
+nav ul{
     width: 100%;
-    list-style: none;
-    
+    list-style: none;    
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     gap: 50px;
 }
-ul.menu > li{
+nav ul.menu > li{
     background-color: var(--nav-icon);
     width: 65%;
     border-radius: 15px;
@@ -53,16 +91,16 @@ ul.menu > li{
     justify-content: center;
 }
 /* Animação da lista principal */
-ul.menu > li:hover{
+nav ul.menu > li:hover{
     outline: 3px solid #fff;
     outline-offset: 3px;
 }
-ul.menu > li:hover ul.subMenu{
+nav ul.menu > li:hover ul.subMenu{
     transform: translateX(00px);
 
 }
 /* Parte do SubMenu */
-ul.subMenu{
+nav ul.subMenu{
     background-color: var(--sub-nav-bg);
     width: 100vw;
     max-width: 700px;
@@ -82,11 +120,11 @@ ul.subMenu{
     transform: translateX(-820px);
     transition: transform 900ms ease-out;
 }
-ul.subMenu > li{
+nav ul.subMenu > li{
     background-color: transparent;
     margin: 50px;
 }
-ul.subMenu > li a {
+nav ul.subMenu > li a {
     color: var(--text-color);
     font-size: 1.5rem;
     font-weight: 200;
@@ -98,7 +136,7 @@ ul.subMenu > li a {
 
 
 }
-ul.subMenu img{
+nav ul.subMenu img{
     --tamanho: 250px;
     max-width: var(--tamanho);
     max-height: var(--tamanho);
@@ -112,13 +150,13 @@ ul.subMenu img{
     grid-area: 2 / 3 / span 2 / span 3;
 }
 /* Animação do SubMenu */
-ul.subMenu > li a:hover{
+nav ul.subMenu > li a:hover{
     font-weight: 400;
     border-bottom: 2px solid var(--text-color);
     padding: 0px 10px 5px 10px;
 }
 /* Botão de voltar */
-a.inicio{
+nav a.inicio{
     position: absolute;
     inset: 92% auto;
 

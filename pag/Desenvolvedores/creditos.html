@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produção - [Nome do site]</title>
     <style>
+
+ul.menu > li.active{
+    outline: 3px solid #fff;
+    outline-offset: 3px;
+}
+ul.menu > li.active ul.subMenu{
+    transform: translateX(00px);
+
+}
         :root{
             --bg-color: #2E4535;
         }
@@ -132,55 +141,75 @@
 </head>
 <body>
     <nav>
+        <div class="hamburguer_space"></div>
         <div class="login"></div>
         <ul class="menu">
-            <li><a href=""></a>
-                
-                <ul class="subMenu">
-                    <li><a href="">Tópico1</a></li>
-                    <li><a href="">Tópico2</a></li>
-                    <li><a href="">Tópico3</a></li>
-                    <li><a href="">Tópico4</a></li>
-                    <img src="/img/pexels-pixabay-459335.jpg" alt="">
-                </ul>
-            </li>
-            <li><a href=""></a>
-                <ul class="subMenu">
-                    <li><a href="">Tópico5</a></li>
-                    <li><a href="">Tópico6</a></li>
-                    <li><a href="">Tópico7</a></li>
-                    <li><a href="">Tópico8</a></li>
-                    <img src="/img/pexels-pixabay-459335.jpg" alt="">
-                </ul>
-            </li>
-            <li><a href=""></a>
-                <ul class="subMenu">
-                    <li><a href="">Tópico9</a></li>
-                    <li><a href="">Tópico10</a></li>
-                    <li><a href="">Tópico11</a></li>
-                    <li><a href="">Tópico12</a></li>
-                    <img src="/img/pexels-pixabay-459335.jpg" alt="">
-                </ul>
-            </li>
-            <li><a href=""></a>
-                <ul class="subMenu">
-                    <li><a href="">Tópico13</a></li>
-                    <li><a href="">Tópico14</a></li>
-                    <li><a href="">Tópico15</a></li>
-                    <li><a href="">Tópico16</a></li>
-                    <img src="/img/pexels-pixabay-459335.jpg" alt="">
-                </ul>
-            </li>
+            <label for="radio_menu1">
+                <li>
+                    <a href=""></a>
+                    <input type="radio" name="radio_menu" id="radio_menu1" checked>
+                    <ul class="subMenu">
+                        <li><a href="">Tópico1</a></li>
+                        <li><a href="">Tópico2</a></li>
+                        <li><a href="">Tópico3</a></li>
+                        <li><a href="">Tópico4</a></li>
+                        <img src="img/pexels-pixabay-459335.jpg" alt="">
+                    </ul>
+                </li>
+            </label>
+            <label for="radio_menu2">
+                <li>
+                    <a href=""></a>
+                    <input type="radio" name="radio_menu" id="radio_menu2">
+
+                    <ul class="subMenu">
+                        <li><a href="">Tópico5</a></li>
+                        <li><a href="">Tópico6</a></li>
+                        <li><a href="">Tópico7</a></li>
+                        <li><a href="">Tópico8</a></li>
+                        <img src="img/pexels-pixabay-459335.jpg" alt="">
+                    </ul>
+                </li>
+            </label>
+            <label for="radio_menu3">
+                <li>
+                    <a href=""></a>
+                    <input type="radio" name="radio_menu" id="radio_menu3">
+
+                    <ul class="subMenu">
+                        <li><a href="">Tópico9</a></li>
+                        <li><a href="">Tópico10</a></li>
+                        <li><a href="">Tópico11</a></li>
+                        <li><a href="">Tópico12</a></li>
+                        <img src="img/pexels-pixabay-459335.jpg" alt="">
+                    </ul>
+                </li>
+            </label>
+            <label for="radio_menu4">
+                <li>
+                    <a href=""></a>
+                    <input type="radio" name="radio_menu" id="radio_menu4">
+
+                    <ul class="subMenu">
+                        <li><a href="">Tópico13</a></li>
+                        <li><a href="">Tópico14</a></li>
+                        <li><a href="">Tópico15</a></li>
+                        <li><a href="">Tópico16</a></li>
+                        <img src="img/pexels-pixabay-459335.jpg" alt="">
+                    </ul>
+                </li>
+            </label>
             
         </ul>
         <a href="#" class="inicio">início</a>
     </nav>
+    <div class="modal"></div>
 
     <main>
         <div class="person">
             <div class="person__container">
                 <img class="person__circle" src="img/pexels-pixabay-459335.jpg" alt="" >
-                <img class="person__img" src="img/Our_image/태조_말랑말랑_메이커_-_n_eu-removebg-preview.png" alt="My image" >
+                <img class="person__img" src="img/Our_image/perfil.png" alt="My image" >
             </div>
             <div class="info">
                 <a target="_blank" rel="noopener noreferrer" href="https://github.com/mStof"><img src="img/Logos/github_white_logo.png" alt="Github_icon"></a>
@@ -193,7 +222,7 @@
         <div class="person">
             <div class="person__container">
                 <img class="person__circle" src="img/pexels-pixabay-459335.jpg" alt="" >
-                <img class="person__img" src="img/Our_image/태조_말랑말랑_메이커_-_n_eu-removebg-preview.png" alt="My image" >
+                <img class="person__img" src="img/Our_image/perfil.png" alt="My image" >
             </div>
             <div class="info">
                 <a href="https://github.com/mStof"><img src="img/Logos/github_white_logo.png" alt="Github_icon"></a>
@@ -205,7 +234,7 @@
         <div class="person">
             <div class="person__container">
                 <img class="person__circle" src="img/pexels-pixabay-459335.jpg" alt="" >
-                <img class="person__img" src="img/Our_image/태조_말랑말랑_메이커_-_n_eu-removebg-preview.png" alt="My image" >
+                <img class="person__img" src="img/Our_image/perfil.png" alt="My image" >
             </div>
             <div class="info">
                 <a href="https://github.com/mStof"><img src="img/Logos/github_white_logo.png" alt="Github_icon"></a>
@@ -217,7 +246,7 @@
         <div class="person">
             <div class="person__container">
                 <img class="person__circle" src="img/pexels-pixabay-459335.jpg" alt="" >
-                <img class="person__img" src="img/Our_image/태조_말랑말랑_메이커_-_n_eu-removebg-preview.png" alt="My image" >
+                <img class="person__img" src="img/Our_image/perfil.png" alt="My image" >
             </div>
             <div class="info">
                 <a href="https://github.com/mStof"><img src="img/Logos/github_white_logo.png" alt="Github_icon"></a>
@@ -229,7 +258,7 @@
         <div class="person">
             <div class="person__container">
                 <img class="person__circle" src="img/pexels-pixabay-459335.jpg" alt="" >
-                <img class="person__img" src="img/Our_image/태조_말랑말랑_메이커_-_n_eu-removebg-preview.png" alt="My image" >
+                <img class="person__img" src="img/Our_image/perfil.png" alt="My image" >
             </div>
             <div class="info">
                 <a href="https://github.com/mStof"><img src="img/Logos/github_white_logo.png" alt="Github_icon"></a>
@@ -242,6 +271,27 @@
         
     </main>
 
-    
+    <script>
+        const modal = document.querySelector('.modal');
+        var radio = document.querySelectorAll('nav input[type="radio"]')
+
+        const removeCheck = () => {
+            console.log(radio)
+            for (const i of radio) {
+                if(i.checked) {
+                    modal.style.display = 'block'
+                    return
+                }
+                else {
+                    modal.style.display = 'none'
+                }
+            }
+        }
+        document.getElementsByTagName('body')[0].addEventListener('click', removeCheck)
+        modal.addEventListener('click', () => {
+            modal.style.display = 'none';
+            for (const i of radio){ i.checked = false}
+        })
+    </script>
 </body>
 </html>
