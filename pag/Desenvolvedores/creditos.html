@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produção - [Nome do site]</title>
+    <link rel="stylesheet" href="css/menu.css">
+
     <style>
 
 ul.menu > li.active{
@@ -134,10 +136,12 @@ ul.menu > li.active ul.subMenu{
         .person:hover::after{
             opacity: 0;
         }
+        nav{
+            transform: translateX(0px);
+        }
         
 
     </style>
-    <link rel="stylesheet" href="css/menu.css">
 </head>
 <body>
     <nav>
@@ -272,26 +276,13 @@ ul.menu > li.active ul.subMenu{
     </main>
 
     <script>
-        const modal = document.querySelector('.modal');
-        var radio = document.querySelectorAll('nav input[type="radio"]')
-
-        const removeCheck = () => {
-            console.log(radio)
-            for (const i of radio) {
-                if(i.checked) {
-                    modal.style.display = 'block'
-                    return
-                }
-                else {
-                    modal.style.display = 'none'
-                }
-            }
-        }
-        document.getElementsByTagName('body')[0].addEventListener('click', removeCheck)
-        modal.addEventListener('click', () => {
-            modal.style.display = 'none';
-            for (const i of radio){ i.checked = false}
-        })
+      function RemoveCheck(clique) {
+        console.log(clique.target.childNodes[3].checked)
+        clique.target.childNodes[3].checked = (clique.target.childNodes[3].checked == true) ? false : true
+        console.log(clique.target.childNodes[3].checked)
+    }
+      document.addEventListener('mouseup', RemoveCheck)
     </script>
+    <script src="../Login & Cadastro/menu.js"></script>
 </body>
 </html>

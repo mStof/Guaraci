@@ -20,6 +20,7 @@ modal.addEventListener('click', () => {
 })
 
 //-----------
+if(!(menu == null)){
 menu.addEventListener('click', () => {
     console.log('here')
     let menu = document.querySelector('input#menu')
@@ -28,4 +29,5 @@ menu.addEventListener('click', () => {
             i.checked = false
         }
     }
-}) 
+})
+}
