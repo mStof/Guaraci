@@ -1,52 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guaraci</title>
     <style>
-            @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap'); 
-            *{padding: 0;margin: 0;box-sizing: border-box;             transition: all 500ms;
-}
-           :root{
-            --primary-green: #539AD5;
-            --second-green:#4DA1FF;
-            --tirth-green:#00619A;
-
-            --text-color:#fff;
-
-            --primary-yellow:#FCFF63;
-            --second-yellow:#D3CA03;
-
-            --primary-brown:#62462F;
-            --second-brown:#563E29;
+        @import url("https://fonts.googleapis.com/css2?family=Italiana&display=swap");
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            transition: all 500ms;
         }
-        :root.dark{
-            --primary-green:#001F3F;
-            --second-green:#3D5A80;
-            --tirth-green:#162E50 ;
-            --primary-brown:#62462F;
-            --second-brown:#3E2C1E;
+        :root {
+            --primary-green: #539ad5;
+            --second-green: #4da1ff;
+            --tirth-green: #00619a;
+
+            --text-color: #fff;
+
+            --primary-yellow: #fcff63;
+            --second-yellow: #d3ca03;
+
+            --primary-brown: #62462f;
+            --second-brown: #563e29;
         }
-        html{
-            width: 100vw;
+        :root.dark {
+            --primary-green: #001f3f;
+            --second-green: #3d5a80;
+            --tirth-green: #162e50;
+            --primary-brown: #62462f;
+            --second-brown: #3e2c1e;
+        }
+        
+        body {
+            background: url(img/Index/Montanha_direita.svg) no-repeat right -110%, 
+            url(img/Index/Montanha_esquerda.svg) no-repeat -110px 120% var(--primary-green);
             height: 100vh;
-        }
-        body{
-            background-color: var(--primary-green);
-            height: 100vh;
             width: 100vw;
-            display: grid;
-            grid-template-columns: 1fr 5fr 1fr;
-            grid-template-rows: 1.5fr 2fr .5fr 5fr;
-            column-gap: 25px;
-            font-family: 'Italiana', sans-serif;   
-            overflow: hidden;     
-        }
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: space-between;
 
+            font-family: "Italiana", sans-serif;
+        }
+        .inputs {
+        width: 100vw;
+        height: 75px;
+        display: flex;
+        justify-content: space-between;
+
+    }
         #lingua{
-            
-            grid-area: 1 / 1 / 2 / 2; 
             background-color: var(--tirth-green);
             position: relative;
             top: 25px;
@@ -95,13 +101,8 @@
             left: 87%;
             top: 23.5px;
         }
-        
-       
-
-
         #modo{  
-            grid-area: 1 / 3 / 2 / 4;
-            place-self:start end;
+           
             background-color: var(--tirth-green);
             position: relative;
             top: 25px;
@@ -109,7 +110,6 @@
             height: 35px;
             width: 115px;
             border-radius: 5px;
-            z-index: 2;
             font-size: 16px;
             
         }
@@ -141,18 +141,17 @@
             right: 20px;
             z-index: 3;
         }
-        
-
-
-        #title{ 
-            grid-area: 2 / 2 / 3 / 3; 
-            place-self: center;
-            color: var(--text-color);
-            font-weight: 100;
-            font-size: 9.5rem;
-            position: relative;
-            text-shadow: 0px -5px 10px rgba(0, 0, 0, 0.50);
-           
+        #title{
+        flex: 0 1 auto;
+      
+        color: var(--text-color);
+        font-weight: 100;
+        font-size: 9.5rem;
+        text-shadow: 0px -5px 10px rgba(0, 0, 0, 0.50);
+      
+        position: relative;
+        display: grid;
+        place-content: center;
         }
         #title::after{
             content: '';
@@ -168,56 +167,55 @@
         #title::before{
             content: 'lorem lorem lorem lorem lorem lorem lorem lorem lorem';
             position: absolute;
-            inset:95% 0 0 50% ;
-            transform: translateX(-40%);
+            inset:100% 0px 0px 55%;
+            transform: translate(-50%, -50%);
             width: 100%;
             height: fit-content;
             font-size: 1.2rem;
         }
 
-        
         #sol{ 
-            grid-area: 4 / 2 / 5 / 3;
-            place-self: end center;
+            flex: 0 1 auto;
+            width: 100vw;
+            aspect-ratio: 1/1;
             position: relative;
             
             display: grid;
             place-content: center;
-            transform: translateY(100px); 
+            overflow: hidden;
+            
+            display: grid;
         }
-        #sol h1{
+        #sol::after{
+            content: 'Começar';
+            place-self:top;
+            position: relative;
+            top:-200%;
+            z-index: 1;
+            
             color: var(--tirth-green, #0005);
             text-align: center;
             font-family: Italiana;
-            place-self: center;
             font-style: normal;
             font-weight: 400;
             font-size: 8rem;
-            line-height: normal;
             text-decoration-line: underline;
-            position: absolute;
-            top: 25%;
-            z-index: 1;
+            
             cursor: pointer;
-            transition: scale 300ms;
             user-select: none;
-            
-            
-            
+            transition: scale 300ms;
         }
         #sol svg{
-            animation: rotateSol 15s linear 0s infinite running;
-            cursor: pointer;
-            transition: scale 300ms ;
-            position: relative;
-            /* top: 40px; */
-            
-            
+        position: relative;
+        top: 40%;
+        cursor: pointer;
+
+        animation: rotateSol 15s linear 0s infinite running;
+        transition: scale 300ms ;
         }
-        #sol:active svg, #sol:active h1{
+        #sol:active svg, #sol:active::after{
             scale: .9;
         }
-        
         @keyframes rotateSol {
             0%{
                 rotate: 0deg;
@@ -226,215 +224,315 @@
                 rotate: 360deg;
             }
         }
-        .montanha_grande{
-            position: absolute;
-            grid-area: 2 / 3 / 5 / 4; 
-            place-self: end;
-            isolation: isolate;
-            z-index: 1;
-            
-            /* transform: translateY(50px); */
-        }
-        .montanha_grande path{
-            transform: translate( 10px, 205px);   
-            fill: var(--primary-brown);
-        }
-        .montanha_pequena{
-            position: absolute;
-            grid-area: 2 / 1 / 5 / 2; 
-            place-self: end start;
-            
-        }
-        .montanha_pequena path{
-            transform: translate(-50px, 50px);
-            fill: var(--second-brown);
-            
-        }
-        @media (max-width:450px) {
-            .montanha_grande, .montanha_pequena{
-                display: none;
-            }
+        @media (max-width: 451px) {
             html{
                 font-size: 8px;
             }
             body{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+                background: var(--primary-green);
             }
-            
-            #lingua{
-                inset: 15px 0 0 10px;
-                align-self: flex-start;
+            #title{
+                font-size: 25vw;
             }
-            #modo{
-                inset: -20px 0 0 -10px;
-                place-items: none;
-                align-self: flex-end;
-                
-            }
-            #sol{
-                position: relative;
-                inset: 0px;
-                transform: none;
-                display: none;
+            #title::before{
+                font-size: 3.4vw;
             }
             #sol svg{
-                height: 654px;
-                width: 677px;
-                transform: translate(20%, 20%);
+                animation: none;
             }
-            
-            /* #sol{ 
-            grid-area: 4 / 2 / 5 / 3;
-            place-self: end center;
-            position: relative;
-            
-            display: grid;
-            place-content: center;
-            transform: translateY(100px); 
-        } */
-            
+            #sol::after{
+                font-size: 12rem;
+                position: relative;
+                top: -300%;
+            }
         }
+        @media (max-width: 350px) {
+            #lingua{
+                top: 15px;
+                left: 10px;
+            }
+            #modo{
+                top: 15px;
+                right: 10px;
+            }
+            #sol::after{
+                font-size: 9rem;
+                top: -425%;
+            }
+        }
+      
     </style>
-</head>
-<body>
-    <svg class="montanha_grande" width="554" height="771" viewBox="0 0 494 771" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M420.022 43C453.123 -14.3333 535.877 -14.3333 568.978 43L977.309 750.25C1010.41 807.583 969.034 879.25 902.831 879.25H86.1691C19.9662 879.25 -21.4106 807.583 11.6908 750.25L420.022 43Z"/>
-        </svg>
-        <svg class="montanha_pequena" width="502" height="491" viewBox="0 0 502 491" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M111.022 43.0001C144.123 -14.3332 226.877 -14.3333 259.978 43L489.908 441.25C523.009 498.583 481.633 570.25 415.43 570.25H-44.4296C-110.632 570.25 -152.009 498.583 -118.908 441.25L111.022 43.0001Z"/>
-            </svg>
-            
-        
-        
-    <div id="lingua">
-        <label for="select_lingua">
-            <img src="img/Brazil_flag.svg" alt="Brazil_flag" class="flag">
-            <select name="select_lingua" id="select_lingua">
-                <option value="PT">
-                    <h1 class="sigla">PT</h1>
-                </option>
-                <option value="US">
-                    <h1 class="sigla">US</h1>
-                </option>
-            </select>
-        
-            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="9.75" viewBox="0 0 24 13" fill="none">
-                <path d="M12 12L22.6066 1.3934" stroke="white" stroke-linecap="round"/>
-                <path d="M11.96 12L1.35336 1.3934" stroke="white" stroke-linecap="round"/>
-              </svg>
-        </label>
-        
-    </div>
+  </head>
+  <body>
+      
+      <div class="inputs">
+          <div id="lingua">
+              <label for="select_lingua">
+                  <img src="img/index/Brazil_flag.svg" alt="Brazil_flag" class="flag" />
+                  <select name="select_lingua" id="select_lingua">
+                      <option value="PT">
+                          <h1 class="sigla">PT</h1>
+                        </option>
+                        <option value="US">
+              <h1 class="sigla">US</h1>
+            </option>
+          </select>
 
-    <div id="modo">
-        <select name="modo" id="select_modo">
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-        </select>
-        <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="18" height="9.75" viewBox="0 0 24 13" fill="none">
-            <path d="M12 12L22.6066 1.3934" stroke="white" stroke-linecap="round"/>
-            <path d="M11.96 12L1.35336 1.3934" stroke="white" stroke-linecap="round"/>
+          <svg
+            class="arrow"
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="9.75"
+            viewBox="0 0 24 13"
+            fill="none"
+          >
+            <path
+              d="M12 12L22.6066 1.3934"
+              stroke="white"
+              stroke-linecap="round"
+            />
+            <path
+              d="M11.96 12L1.35336 1.3934"
+              stroke="white"
+              stroke-linecap="round"
+            />
           </svg>
+        </label>
+      </div>
+      <div id="modo">
+        <select name="modo" id="select_modo">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+        <svg
+          class="arrow"
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="9.75"
+          viewBox="0 0 24 13"
+          fill="none"
+        >
+          <path
+            d="M12 12L22.6066 1.3934"
+            stroke="white"
+            stroke-linecap="round"
+          />
+          <path
+            d="M11.96 12L1.35336 1.3934"
+            stroke="white"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
     </div>
 
-    <h1 id="title" >Guaraci</h1>
+    <h1 id="title">Guaraci</h1>
 
     <div id="sol">
-        <h1 class="iniciar">Começar</h1>
-        <svg width="942" height="910" viewBox="0 0 942 910" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g filter="url(#filter0_d_283_332)">
-            <circle cx="470.625" cy="454.674" r="374.907" fill="#FCFF63"/>
-            </g>
-            <path d="M576.142 26.8462C581.297 21.691 590.1 24.0497 591.986 31.0917L604.723 78.6255C606.61 85.6675 600.166 92.1115 593.124 90.2246L545.59 77.4879C538.548 75.601 536.19 66.7984 541.345 61.6433L576.142 26.8462Z" fill="#D3CA03"/>
-            <path d="M682.671 69.0602C688.984 65.415 696.877 69.9715 696.877 77.262L696.877 126.473C696.877 133.763 688.984 138.32 682.671 134.674L640.053 110.069C633.739 106.424 633.739 97.3108 640.053 93.6655L682.671 69.0602Z" fill="#D3CA03"/>
-            <path d="M775.303 138.148C782.345 136.261 788.789 142.705 786.902 149.747L774.165 197.281C772.278 204.323 763.476 206.681 758.32 201.526L723.523 166.729C718.368 161.574 720.727 152.771 727.769 150.884L775.303 138.148Z" fill="#D3CA03"/>
-            <path d="M846.371 227.753C853.661 227.753 858.218 235.645 854.572 241.959L829.967 284.576C826.322 290.89 817.209 290.89 813.564 284.576L788.958 241.959C785.313 235.645 789.87 227.753 797.16 227.753L846.371 227.753Z" fill="#D3CA03"/>
-            <path d="M893.539 332.645C900.581 334.532 902.94 343.334 897.785 348.489L862.988 383.286C857.832 388.441 849.03 386.083 847.143 379.041L834.406 331.507C832.519 324.465 838.963 318.021 846.005 319.908L893.539 332.645Z" fill="#D3CA03"/>
-            <path d="M462.914 14.2059C466.56 7.89217 475.673 7.89215 479.318 14.2059L503.923 56.8235C507.568 63.1372 503.012 71.0294 495.721 71.0294H446.511C439.22 71.0294 434.664 63.1372 438.309 56.8235L462.914 14.2059Z" fill="#D3CA03"/>
-            <path d="M853.638 429.943C853.638 422.652 861.53 418.096 867.844 421.741L910.462 446.346C916.775 449.992 916.775 459.105 910.462 462.75L867.844 487.355C861.53 491 853.638 486.444 853.638 479.153L853.638 429.943Z" fill="#D3CA03"/>
-            <path d="M365.859 26.8462C360.704 21.691 351.901 24.0497 350.014 31.0917L337.277 78.6255C335.391 85.6675 341.834 92.1115 348.876 90.2246L396.41 77.4879C403.452 75.601 405.811 66.7984 400.656 61.6433L365.859 26.8462Z" fill="#D3CA03"/>
-            <path d="M259.329 69.0602C253.016 65.415 245.123 69.9715 245.123 77.262L245.123 126.473C245.123 133.763 253.016 138.32 259.329 134.674L301.947 110.069C308.261 106.424 308.261 97.3108 301.947 93.6655L259.329 69.0602Z" fill="#D3CA03"/>
-            <path d="M166.696 138.148C159.654 136.261 153.211 142.705 155.097 149.747L167.834 197.281C169.721 204.323 178.524 206.681 183.679 201.526L218.476 166.729C223.631 161.574 221.272 152.771 214.23 150.884L166.696 138.148Z" fill="#D3CA03"/>
-            <path d="M95.6289 227.753C88.3385 227.753 83.7819 235.645 87.4272 241.959L112.032 284.576C115.678 290.89 124.791 290.89 128.436 284.576L153.041 241.959C156.687 235.645 152.13 227.753 144.84 227.753L95.6289 227.753Z" fill="#D3CA03"/>
-            <path d="M48.4594 332.645C41.4173 334.532 39.0587 343.334 44.2138 348.489L79.011 383.286C84.1661 388.441 92.9687 386.083 94.8556 379.041L107.592 331.507C109.479 324.465 103.035 318.021 95.9932 319.908L48.4594 332.645Z" fill="#D3CA03"/>
-            <path d="M479.085 14.2059C475.439 7.89217 466.326 7.89215 462.681 14.2059L438.076 56.8235C434.431 63.1372 438.987 71.0294 446.278 71.0294H495.488C502.779 71.0294 507.335 63.1372 503.69 56.8235L479.085 14.2059Z" fill="#D3CA03"/>
-            <path d="M88.3618 429.943C88.3618 422.652 80.4696 418.096 74.1559 421.741L31.5383 446.346C25.2246 449.992 25.2246 459.105 31.5383 462.75L74.1559 487.355C80.4696 491 88.3618 486.444 88.3618 479.153L88.3618 429.943Z" fill="#D3CA03"/>
-            <path d="M365.859 882.25C360.704 887.405 351.901 885.047 350.014 878.005L337.277 830.471C335.391 823.429 341.834 816.985 348.876 818.872L396.41 831.609C403.452 833.495 405.811 842.298 400.656 847.453L365.859 882.25Z" fill="#D3CA03"/>
-            <path d="M259.329 840.036C253.016 843.681 245.123 839.125 245.123 831.834L245.123 782.624C245.123 775.333 253.016 770.777 259.329 774.422L301.947 799.027C308.261 802.673 308.261 811.786 301.947 815.431L259.329 840.036Z" fill="#D3CA03"/>
-            <path d="M166.696 770.949C159.654 772.836 153.211 766.392 155.097 759.35L167.834 711.816C169.721 704.774 178.524 702.415 183.679 707.57L218.476 742.367C223.631 747.522 221.272 756.325 214.23 758.212L166.696 770.949Z" fill="#D3CA03"/>
-            <path d="M95.6289 681.344C88.3385 681.344 83.7819 673.452 87.4272 667.138L112.032 624.52C115.678 618.206 124.791 618.206 128.436 624.52L153.041 667.138C156.687 673.452 152.13 681.344 144.84 681.344L95.6289 681.344Z" fill="#D3CA03"/>
-            <path d="M48.4594 576.452C41.4173 574.565 39.0587 565.762 44.2138 560.607L79.011 525.81C84.1661 520.655 92.9687 523.013 94.8556 530.055L107.592 577.589C109.479 584.631 103.035 591.075 95.9932 589.188L48.4594 576.452Z" fill="#D3CA03"/>
-            <path d="M479.085 894.891C475.439 901.204 466.326 901.204 462.681 894.891L438.076 852.273C434.431 845.959 438.987 838.067 446.278 838.067H495.488C502.779 838.067 507.335 845.959 503.69 852.273L479.085 894.891Z" fill="#D3CA03"/>
-            <path d="M88.3618 479.154C88.3618 486.444 80.4696 491.001 74.1559 487.355L31.5383 462.75C25.2246 459.105 25.2246 449.992 31.5383 446.346L74.1559 421.741C80.4696 418.096 88.3618 422.652 88.3618 429.943L88.3618 479.154Z" fill="#D3CA03"/>
-            <path d="M576.142 882.25C581.297 887.405 590.1 885.047 591.986 878.005L604.723 830.471C606.61 823.429 600.166 816.985 593.124 818.872L545.59 831.609C538.548 833.495 536.19 842.298 541.345 847.453L576.142 882.25Z" fill="#D3CA03"/>
-            <path d="M682.671 840.036C688.984 843.681 696.877 839.125 696.877 831.834L696.877 782.624C696.877 775.333 688.984 770.777 682.671 774.422L640.053 799.027C633.739 802.673 633.739 811.786 640.053 815.431L682.671 840.036Z" fill="#D3CA03"/>
-            <path d="M775.303 770.949C782.345 772.836 788.789 766.392 786.902 759.35L774.165 711.816C772.278 704.774 763.476 702.415 758.32 707.57L723.523 742.367C718.368 747.522 720.727 756.325 727.769 758.212L775.303 770.949Z" fill="#D3CA03"/>
-            <path d="M846.371 681.344C853.661 681.344 858.218 673.452 854.572 667.138L829.967 624.52C826.322 618.206 817.209 618.206 813.564 624.52L788.958 667.138C785.313 673.452 789.87 681.344 797.16 681.344L846.371 681.344Z" fill="#D3CA03"/>
-            <path d="M893.539 576.452C900.581 574.565 902.94 565.762 897.785 560.607L862.988 525.81C857.832 520.655 849.03 523.013 847.143 530.055L834.406 577.589C832.519 584.631 838.963 591.075 846.005 589.188L893.539 576.452Z" fill="#D3CA03"/>
-            <path d="M462.914 894.891C466.56 901.204 475.673 901.204 479.318 894.891L503.923 852.273C507.568 845.959 503.012 838.067 495.721 838.067H446.511C439.22 838.067 434.664 845.959 438.309 852.273L462.914 894.891Z" fill="#D3CA03"/>
-            <path d="M853.638 479.154C853.638 486.444 861.53 491.001 867.844 487.355L910.462 462.75C916.775 459.105 916.775 449.992 910.462 446.346L867.844 421.741C861.53 418.096 853.638 422.652 853.638 429.943L853.638 479.154Z" fill="#D3CA03"/>
-            <defs>
-            <filter id="filter0_d_283_332" x="55.7851" y="39.8343" width="829.679" height="829.679" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-            <feMorphology radius="17" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_283_332"/>
-            <feOffset/>
-            <feGaussianBlur stdDeviation="11.4666"/>
-            <feComposite in2="hardAlpha" operator="out"/>
-            <feColorMatrix type="matrix" values="0 0 0 0 0.917647 0 0 0 0 0.929412 0 0 0 0 0.309804 0 0 0 0.2 0"/>
-            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_283_332"/>
-            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_283_332" result="shape"/>
-            </filter>
-            </defs>
-            </svg>
-            
-            
-            
-            
-    </div>
+      <svg
+        width="942"
+        height="910"
+        viewBox="0 0 942 910"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g filter="url(#filter0_d_283_332)">
+          <circle cx="470.625" cy="454.674" r="374.907" fill="#FCFF63" />
+        </g>
+        <path
+          d="M576.142 26.8462C581.297 21.691 590.1 24.0497 591.986 31.0917L604.723 78.6255C606.61 85.6675 600.166 92.1115 593.124 90.2246L545.59 77.4879C538.548 75.601 536.19 66.7984 541.345 61.6433L576.142 26.8462Z"
+          fill="#D3CA03"
+        />
+        <path
+          d="M682.671 69.0602C688.984 65.415 696.877 69.9715 696.877 77.262L696.877 126.473C696.877 133.763 688.984 138.32 682.671 134.674L640.053 110.069C633.739 106.424 633.739 97.3108 640.053 93.6655L682.671 69.0602Z"
+          fill="#D3CA03"
+        />
+        <path
+          d="M775.303 138.148C782.345 136.261 788.789 142.705 786.902 149.747L774.165 197.281C772.278 204.323 763.476 206.681 758.32 201.526L723.523 166.729C718.368 161.574 720.727 152.771 727.769 150.884L775.303 138.148Z"
+          fill="#D3CA03"
+        />
+        <path
+          d="M846.371 227.753C853.661 227.753 858.218 235.645 854.572 241.959L829.967 284.576C826.322 290.89 817.209 290.89 813.564 284.576L788.958 241.959C785.313 235.645 789.87 227.753 797.16 227.753L846.371 227.753Z"
+          fill="#D3CA03"
+        />
+        <path
+          d="M893.539 332.645C900.581 334.532 902.94 343.334 897.785 348.489L862.988 383.286C857.832 388.441 849.03 386.083 847.143 379.041L834.406 331.507C832.519 324.465 838.963 318.021 846.005 319.908L893.539 332.645Z"
+          fill="#D3CA03"
+        />
+        <path
+          d="M462.914 14.2059C466.56 7.89217 475.673 7.89215 479.318 14.2059L503.923 56.8235C507.568 63.1372 503.012 71.0294 495.721 71.0294H446.511C439.22 71.0294 434.664 63.1372 438.309 56.8235L462.914 14.2059Z"
+          fill="#D3CA03"
+          />
+          <path
+          d="M853.638 429.943C853.638 422.652 861.53 418.096 867.844 421.741L910.462 446.346C916.775 449.992 916.775 459.105 910.462 462.75L867.844 487.355C861.53 491 853.638 486.444 853.638 479.153L853.638 429.943Z"
+          fill="#D3CA03"
+          />
+          <path
+          d="M365.859 26.8462C360.704 21.691 351.901 24.0497 350.014 31.0917L337.277 78.6255C335.391 85.6675 341.834 92.1115 348.876 90.2246L396.41 77.4879C403.452 75.601 405.811 66.7984 400.656 61.6433L365.859 26.8462Z"
+          fill="#D3CA03"
+          />
+          <path
+          d="M259.329 69.0602C253.016 65.415 245.123 69.9715 245.123 77.262L245.123 126.473C245.123 133.763 253.016 138.32 259.329 134.674L301.947 110.069C308.261 106.424 308.261 97.3108 301.947 93.6655L259.329 69.0602Z"
+          fill="#D3CA03"
+        />
+        <path
+          d="M166.696 138.148C159.654 136.261 153.211 142.705 155.097 149.747L167.834 197.281C169.721 204.323 178.524 206.681 183.679 201.526L218.476 166.729C223.631 161.574 221.272 152.771 214.23 150.884L166.696 138.148Z"
+          fill="#D3CA03"
+          />
+        <path
+          d="M95.6289 227.753C88.3385 227.753 83.7819 235.645 87.4272 241.959L112.032 284.576C115.678 290.89 124.791 290.89 128.436 284.576L153.041 241.959C156.687 235.645 152.13 227.753 144.84 227.753L95.6289 227.753Z"
+          fill="#D3CA03"
+          />
+        <path
+          d="M48.4594 332.645C41.4173 334.532 39.0587 343.334 44.2138 348.489L79.011 383.286C84.1661 388.441 92.9687 386.083 94.8556 379.041L107.592 331.507C109.479 324.465 103.035 318.021 95.9932 319.908L48.4594 332.645Z"
+          fill="#D3CA03"
+        />
+        <path
+          d="M479.085 14.2059C475.439 7.89217 466.326 7.89215 462.681 14.2059L438.076 56.8235C434.431 63.1372 438.987 71.0294 446.278 71.0294H495.488C502.779 71.0294 507.335 63.1372 503.69 56.8235L479.085 14.2059Z"
+          fill="#D3CA03"
+        />
+        <path
+          d="M88.3618 429.943C88.3618 422.652 80.4696 418.096 74.1559 421.741L31.5383 446.346C25.2246 449.992 25.2246 459.105 31.5383 462.75L74.1559 487.355C80.4696 491 88.3618 486.444 88.3618 479.153L88.3618 429.943Z"
+          fill="#D3CA03"
+          />
+        <path
+          d="M365.859 882.25C360.704 887.405 351.901 885.047 350.014 878.005L337.277 830.471C335.391 823.429 341.834 816.985 348.876 818.872L396.41 831.609C403.452 833.495 405.811 842.298 400.656 847.453L365.859 882.25Z"
+          fill="#D3CA03"
+        />
+        <path
+        d="M259.329 840.036C253.016 843.681 245.123 839.125 245.123 831.834L245.123 782.624C245.123 775.333 253.016 770.777 259.329 774.422L301.947 799.027C308.261 802.673 308.261 811.786 301.947 815.431L259.329 840.036Z"
+          fill="#D3CA03"
+        />
+        <path
+        d="M166.696 770.949C159.654 772.836 153.211 766.392 155.097 759.35L167.834 711.816C169.721 704.774 178.524 702.415 183.679 707.57L218.476 742.367C223.631 747.522 221.272 756.325 214.23 758.212L166.696 770.949Z"
+        fill="#D3CA03"
+        />
+        <path
+          d="M95.6289 681.344C88.3385 681.344 83.7819 673.452 87.4272 667.138L112.032 624.52C115.678 618.206 124.791 618.206 128.436 624.52L153.041 667.138C156.687 673.452 152.13 681.344 144.84 681.344L95.6289 681.344Z"
+          fill="#D3CA03"
+        />
+        <path
+        d="M48.4594 576.452C41.4173 574.565 39.0587 565.762 44.2138 560.607L79.011 525.81C84.1661 520.655 92.9687 523.013 94.8556 530.055L107.592 577.589C109.479 584.631 103.035 591.075 95.9932 589.188L48.4594 576.452Z"
+          fill="#D3CA03"
+        />
+        <path
+          d="M479.085 894.891C475.439 901.204 466.326 901.204 462.681 894.891L438.076 852.273C434.431 845.959 438.987 838.067 446.278 838.067H495.488C502.779 838.067 507.335 845.959 503.69 852.273L479.085 894.891Z"
+          fill="#D3CA03"
+        />
+        <path
+          d="M88.3618 479.154C88.3618 486.444 80.4696 491.001 74.1559 487.355L31.5383 462.75C25.2246 459.105 25.2246 449.992 31.5383 446.346L74.1559 421.741C80.4696 418.096 88.3618 422.652 88.3618 429.943L88.3618 479.154Z"
+          fill="#D3CA03"
+        />
+        <path
+        d="M576.142 882.25C581.297 887.405 590.1 885.047 591.986 878.005L604.723 830.471C606.61 823.429 600.166 816.985 593.124 818.872L545.59 831.609C538.548 833.495 536.19 842.298 541.345 847.453L576.142 882.25Z"
+          fill="#D3CA03"
+        />
+        <path
+        d="M682.671 840.036C688.984 843.681 696.877 839.125 696.877 831.834L696.877 782.624C696.877 775.333 688.984 770.777 682.671 774.422L640.053 799.027C633.739 802.673 633.739 811.786 640.053 815.431L682.671 840.036Z"
+          fill="#D3CA03"
+          />
+        <path
+          d="M775.303 770.949C782.345 772.836 788.789 766.392 786.902 759.35L774.165 711.816C772.278 704.774 763.476 702.415 758.32 707.57L723.523 742.367C718.368 747.522 720.727 756.325 727.769 758.212L775.303 770.949Z"
+          fill="#D3CA03"
+        />
+        <path
+        d="M846.371 681.344C853.661 681.344 858.218 673.452 854.572 667.138L829.967 624.52C826.322 618.206 817.209 618.206 813.564 624.52L788.958 667.138C785.313 673.452 789.87 681.344 797.16 681.344L846.371 681.344Z"
+          fill="#D3CA03"
+        />
+        <path
+        d="M893.539 576.452C900.581 574.565 902.94 565.762 897.785 560.607L862.988 525.81C857.832 520.655 849.03 523.013 847.143 530.055L834.406 577.589C832.519 584.631 838.963 591.075 846.005 589.188L893.539 576.452Z"
+        fill="#D3CA03"
+        />
+        <path
+        d="M462.914 894.891C466.56 901.204 475.673 901.204 479.318 894.891L503.923 852.273C507.568 845.959 503.012 838.067 495.721 838.067H446.511C439.22 838.067 434.664 845.959 438.309 852.273L462.914 894.891Z"
+          fill="#D3CA03"
+        />
+        <path
+          d="M853.638 479.154C853.638 486.444 861.53 491.001 867.844 487.355L910.462 462.75C916.775 459.105 916.775 449.992 910.462 446.346L867.844 421.741C861.53 418.096 853.638 422.652 853.638 429.943L853.638 479.154Z"
+          fill="#D3CA03"
+        />
+        <defs>
+          <filter id="filter0_d_283_332" x="55.7851" y="39.8343" width="829.679" height="829.679" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feColorMatrix
+              in="SourceAlpha"
+              type="matrix"
+              values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              result="hardAlpha"
+            />
+            <feMorphology
+              radius="17"
+              operator="dilate"
+              in="SourceAlpha"
+              result="effect1_dropShadow_283_332"
+            />
+            <feOffset />
+            <feGaussianBlur stdDeviation="11.4666" />
+            <feComposite in2="hardAlpha" operator="out" />
+            <feColorMatrix
+              type="matrix"
+              values="0 0 0 0 0.917647 0 0 0 0 0.929412 0 0 0 0 0.309804 0 0 0 0.2 0"
+            />
+            <feBlend
+              mode="normal"
+              in2="BackgroundImageFix"
+              result="effect1_dropShadow_283_332"
+            />
+            <feBlend
+              mode="normal"
+              in="SourceGraphic"
+              in2="effect1_dropShadow_283_332"
+              result="shape"
+            />
+          </filter>
+        </defs>
+    </svg>
+</div>
+
     <script>
-        const select_lingua = document.querySelector('select#select_lingua');
-        console.log(select_lingua)
-        select_lingua.addEventListener('change', () => {
-            let Flags = {
-                flags:['img/Brazil_flag.svg', 'img/USA_Flag.svg'],
-                alt: ['Brazil_flag' ,'USA_flag'],
-                text:['Começar', 'Start']
-            }
-            document.querySelector('img.flag').src = (select_lingua.value == 'US') ? Flags.flags[1] : Flags.flags[0]
-            document.querySelector('img.flag').alt = (select_lingua.value == 'US') ? Flags.alt[1] : Flags.alt[0]
-            document.querySelector('h1.iniciar').textContent = (select_lingua.value == 'US') ? Flags.text[1] : Flags.text[0]
+      const select_lingua = document.querySelector("select#select_lingua");
+      console.log(select_lingua);
+      select_lingua.addEventListener("change", () => {
+        let Flags = {
+          flags: ["img/index/Brazil_flag.svg", "img/index/USA_Flag.svg"],
+          alt: ["Brazil_flag", "USA_flag"],
+          text: ["Começar", "Start"],
+        };
+        document.querySelector("img.flag").src =
+          select_lingua.value == "US" ? Flags.flags[1] : Flags.flags[0];
+        document.querySelector("img.flag").alt =
+          select_lingua.value == "US" ? Flags.alt[1] : Flags.alt[0];
+        document.querySelector("h1.iniciar").textContent =
+          select_lingua.value == "US" ? Flags.text[1] : Flags.text[0];
 
-            if(document.querySelector('h1.iniciar').textContent == Flags.text[1]){
-                document.querySelector('h1.iniciar').style.fontSize = `${9}rem`
-                document.querySelector('h1.iniciar').style.top = `${23}%`
-            }else{
-                document.querySelector('h1.iniciar').style.fontSize = `${8}rem`
-                document.querySelector('h1.iniciar').style.top = `${25}%`
-            }
-        })
+        if (document.querySelector("h1.iniciar").textContent == Flags.text[1]) {
+          document.querySelector("h1.iniciar").style.fontSize = `${9}rem`;
+          document.querySelector("h1.iniciar").style.top = `${23}%`;
+        } else {
+          document.querySelector("h1.iniciar").style.fontSize = `${8}rem`;
+          document.querySelector("h1.iniciar").style.top = `${25}%`;
+        }
+      });
 
-        const select_mode = document.querySelector('select#select_modo')
-        select_mode.addEventListener('change', () => {
-           
-                document.querySelector(':root').classList.toggle('dark')
+      const select_mode = document.querySelector("select#select_modo");
+      select_mode.addEventListener("change", () => {
+        document.querySelector(":root").classList.toggle("dark");
+      });
 
-        })
-
-
-        // EsterEggs
-        select_lingua.addEventListener('change', () => {
-            if(select_lingua.value == 'PT'){
-                document.querySelector('img.flag').addEventListener('mousedown', () => {
-                    console.log('funçar PT')
-                    setTimeout(() => {
-                        document.querySelector('img.flag').src = 'img/Brazil_flag_PT.svg'
-                    }, 1000*5)
-                })
-            }
-        })
+      // EsterEggs
+      select_lingua.addEventListener("change", () => {
+        if (select_lingua.value == "PT") {
+          document
+            .querySelector("img.flag")
+            .addEventListener("mousedown", () => {
+              console.log("funçar PT");
+              setTimeout(() => {
+                document.querySelector("img.flag").src =
+                  "img/index/Brazil_flag_PT.svg";
+              }, 1000 * 5);
+            });
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
