@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
 
     <title>Guaraci</title>
     <style>
@@ -270,7 +269,7 @@
       <div class="inputs">
           <div id="lingua">
               <label for="select_lingua">
-                  <img src="/img/index/Brazil_flag.svg" alt="Brazil_flag" class="flag" />
+                  <img src="img/Index/Brazil_flag.svg" alt="Brazil_flag" class="flag" />
                   <select name="select_lingua" id="select_lingua">
                       <option value="PT">
                           <h1 class="sigla">PT</h1>
@@ -497,7 +496,7 @@
       console.log(select_lingua);
       select_lingua.addEventListener("change", () => {
         let Flags = {
-          flags: ["img/index/Brazil_flag.svg", "img/index/USA_Flag.svg"],
+          flags: ["img/Index/Brazil_flag.svg", "img/Index/USA_Flag.svg"],
           alt: ["Brazil_flag", "USA_flag"],
           text: ["Começar", "Start"],
         };
@@ -522,7 +521,7 @@
               console.log("funçar PT");
               setTimeout(() => {
                 document.querySelector("img.flag").src =
-                  "img/index/Brazil_flag_PT.svg";
+                  "img/Index/Brazil_flag_PT.svg";
               }, 1000 * 5);
             });
         }
