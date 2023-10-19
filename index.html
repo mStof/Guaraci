@@ -186,7 +186,7 @@
             
             display: grid;
         }
-        #sol::after{
+        #sol h1{
             content: 'Começar';
             place-self:top;
             position: relative;
@@ -213,7 +213,7 @@
         animation: rotateSol 15s linear 0s infinite running;
         transition: scale 300ms ;
         }
-        #sol:active svg, #sol:active::after{
+        #sol:active svg, #sol:active h1{
             scale: .9;
         }
         @keyframes rotateSol {
@@ -240,7 +240,7 @@
             #sol svg{
                 animation: none;
             }
-            #sol::after{
+            #sol h1{
                 font-size: 12rem;
                 position: relative;
                 top: -300%;
@@ -255,7 +255,7 @@
                 top: 15px;
                 right: 10px;
             }
-            #sol::after{
+            #sol h1{
                 font-size: 9rem;
                 top: -425%;
             }
@@ -487,6 +487,7 @@
           </filter>
         </defs>
     </svg>
+    <h1 class="iniciar">Começar</h1>
 </div>
 
     <script>
@@ -498,20 +499,11 @@
           alt: ["Brazil_flag", "USA_flag"],
           text: ["Começar", "Start"],
         };
-        document.querySelector("img.flag").src =
-          select_lingua.value == "US" ? Flags.flags[1] : Flags.flags[0];
-        document.querySelector("img.flag").alt =
-          select_lingua.value == "US" ? Flags.alt[1] : Flags.alt[0];
-        document.querySelector("h1.iniciar").textContent =
-          select_lingua.value == "US" ? Flags.text[1] : Flags.text[0];
 
-        if (document.querySelector("h1.iniciar").textContent == Flags.text[1]) {
-          document.querySelector("h1.iniciar").style.fontSize = `${9}rem`;
-          document.querySelector("h1.iniciar").style.top = `${23}%`;
-        } else {
-          document.querySelector("h1.iniciar").style.fontSize = `${8}rem`;
-          document.querySelector("h1.iniciar").style.top = `${25}%`;
-        }
+        document.querySelector("img.flag").src = (select_lingua.value == "US") ? Flags.flags[1] : Flags.flags[0];
+        document.querySelector("img.flag").alt = (select_lingua.value == "US") ? Flags.alt[1] : Flags.alt[0];
+        document.querySelector("h1.iniciar").innerHTML = (select_lingua.value == "US") ? Flags.text[1] : Flags.text[0];
+
       });
 
       const select_mode = document.querySelector("select#select_modo");
