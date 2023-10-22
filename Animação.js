@@ -22,8 +22,10 @@ const voltar = () => {
         duration:.3
     }, '.sol_svg-=1')
 
-    // window.scrollY = 0
-    
+    setTimeout(() => {
+        window.scrollTo({top: 0, behavior:'smooth'})
+    }, 1000);
+
     tlVoltar.to('.sol_svg', {
         scale:1,
         duration:1,
