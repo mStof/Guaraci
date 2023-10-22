@@ -19,7 +19,8 @@ const voltar = () => {
     })
     tlVoltar.to('nav',{
         opacity:0,
-        duration:.3
+        display:'none',
+        duration:.3,
     }, '.sol_svg-=1')
 
     setTimeout(() => {
@@ -81,6 +82,7 @@ const moverSol = () => {
     })
     tlSol.to('nav',{
         opacity:1,
+        display:'block',
         duration:.3
     }, '.sol_svg-=1')
     tlSol.to('body', {
