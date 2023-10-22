@@ -1,0 +1,43 @@
+#sol{ 
+    flex: 0 1 auto;
+    width: 100vw;
+    height: auto;
+    position: relative;
+    display: grid;
+    place-content: center;
+    overflow: hidden;
+    user-select: none;
+    /* background-color: #f005; */
+    
+    
+}
+#sol h1{
+    content: 'Começar';
+    position: absolute;
+    place-self: end center;
+    z-index: 1;
+    margin-bottom: 25px;
+
+    color: var(--tirth-green, #0005);
+    text-align: center;
+    font-family: Italiana;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 8rem;
+    text-decoration-line: underline;
+
+    cursor: pointer;
+    user-select: none;
+    transition: scale 300ms;
+}
+#sol svg{
+    position: relative;
+    top: 35%;
+    
+    cursor: pointer;
+    
+    transition: scale 250ms ;
+}
+#sol:active svg, #sol:active h1{
+    scale: .9;
+}

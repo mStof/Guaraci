@@ -1,0 +1,45 @@
+/* Telas acima de 1280px (full HD pra cima) */
+@media (min-width: 1920px) {
+    #sol svg{
+        top:50%;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 451px), (max-width: 451px) {
+    html{
+        font-size: 8px;
+    }
+    body{
+        background: var(--primary-green);
+        gap: 100px;
+    }
+    #title{
+        font-size: 25vw;
+    }
+    #title::before{
+        font-size: 3.4vw;
+    }
+    #sol svg{
+        /* animation: none; */
+        top: 32%;
+    }
+    #sol h1{
+        font-size: 12rem;
+        
+    }
+}
+
+@media (max-width: 350px) {
+    #lingua{
+        top: 15px;
+        left: 10px;
+    }
+    #modo{
+        top: 15px;
+        right: 10px;
+    }
+    #sol h1{
+        font-size: 9rem;
+        top: -425%;
+    }
+}
