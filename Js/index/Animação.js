@@ -13,7 +13,7 @@ const voltar = () => {
     var tlVoltar = gsap.timeline()
 
     tlVoltar.to('body', {
-        background:'url(img/Index/Montanha_direita.svg) no-repeat right bottom, url(img/Index/Montanha_esquerda.svg) no-repeat -110px 120% var(--primary-green)',
+        background:'url(img/Index/Montanha_direita.svg) no-repeat right bottom, url(img/Index/Montanha_esquerda.svg) no-repeat -110px 120% var(--primary-blue)',
         overflow:'auto',
         duration:0,
     })
@@ -86,7 +86,7 @@ const moverSol = () => {
         duration:.3
     }, '.sol_svg-=1')
     tlSol.to('body', {
-        backgroundImage:'none',
+        background:'var(--primary-blue)',
         overflow:'auto',
         duration:0,
     })

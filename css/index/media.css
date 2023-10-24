@@ -1,6 +1,6 @@
 /* Telas acima de 1280px (full HD pra cima) */
 @media (min-width: 1920px) {
-    #sol svg{
+    #sol img{
         top:50%;
     }
 }
@@ -19,7 +19,7 @@
     #title::before{
         font-size: 3.4vw;
     }
-    #sol svg{
+    #sol img{
         /* animation: none; */
         top: 32%;
     }

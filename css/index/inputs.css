@@ -6,7 +6,7 @@
 
 }
     #lingua{
-        background-color: var(--tirth-green);
+        background-color: var(--tirth-blue);
         position: relative;
         inset: 25px 0 0 25px;
         height: 35px;
@@ -35,7 +35,7 @@
         position: relative;
         top: 10px;
         left: 10px;
-        background-color: var(--second-green);
+        background-color: var(--second-blue);
         border: none;
         outline: none;
         color: var(--text-color);
@@ -62,7 +62,7 @@
     }
     #modo{  
        
-        background-color: var(--tirth-green);
+        background-color: var(--tirth-blue);
         position: relative;
         top: 25px;
         right: 25px;
@@ -78,7 +78,7 @@
         position: relative;
         top: 10px;
         right: 10px;
-        background-color: var(--second-green);
+        background-color: var(--second-blue);
         border: none;
         outline: none;
         color: var(--text-color);
