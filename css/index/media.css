@@ -10,26 +10,29 @@
         font-size: 8px;
     }
     body{
-        background: var(--primary-green);
+        background: var(--primary-blue);
         gap: 100px;
     }
+    
     #title{
         font-size: 25vw;
+        top: 75px;
     }
     #title::before{
         font-size: 3.4vw;
     }
     #sol img{
-        /* animation: none; */
         top: 32%;
     }
     #sol h1{
         font-size: 12rem;
-        
     }
 }
 
 @media (max-width: 350px) {
+    body{
+        gap: 200px;
+    }
     #lingua{
         top: 15px;
         left: 10px;
@@ -39,7 +42,6 @@
         right: 10px;
     }
     #sol h1{
-        font-size: 9rem;
-        top: -425%;
+        font-size: 9.5rem;
     }
 }
