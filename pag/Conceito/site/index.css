@@ -1,0 +1,387 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh   ;
+    background-color: #9b816c;
+    overflow-x: hidden;
+    font-size: 1rem;
+    font-family: 'Comfortaa', sans-serif;
+}
+
+
+.cabecalho{
+
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #9b816c;
+    border-bottom: solid 15px #9b816c;
+    border-radius: 15px;
+    border: 0.2px transparent #74695e;
+}
+
+.txt{
+    height: 100%;
+    width: 50%;
+    background-color: #9b816c;
+    
+margin-top: -100px;
+    
+}
+        .txt h1{
+            color: #ffe5c9;
+            font-family: 'Roboto', sans-serif;
+            font-size:7rem;
+            margin-left: 4%;
+            margin-top: 20%;   
+            display: inline-block;      
+        }
+
+        .txt h1::after{
+            content:"";
+            display: block;
+            border-bottom: 7px solid #ffe5c9;
+            border-radius: 50px;
+        }
+
+        .txt h2{
+            color:#ffe5c9 ;
+            font-size: 2rem;
+            margin-left: 45%;
+            margin-top: 13%;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .txt h2::after{
+            content:"";
+            display: block;
+            border-bottom: 3px solid #ffe5c9;
+            border-radius: 50px;
+        }
+
+        .txt h3{
+            color: white;
+            font-weight: bold;
+            font-size: 1.4rem;
+            margin-top: 1%;
+            margin-left: 47%;
+            width: 50%;
+            text-align: right;
+            font-family: 'Comfortaa', sans-serif;
+        }
+
+
+        .aql{
+            position: absolute;
+            margin-left: -500px;
+            width: 80vw;
+            height: 100vh;
+            background-color:#9b816c ;
+        }
+
+
+
+.img{
+    background-image: url(../Tela\ index.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    height: 100%;
+    width: 50%;
+    background-color: #5AB36A;
+    opacity: 1;
+}
+
+
+
+       
+.Cards{
+    display: flex;
+    margin-top: 7vh;
+    width: 90%;
+    height: 50vh;
+        padding: 3%;
+            background-color: #584e44;
+                border-top-left-radius: 50px;  
+                border-top-right-radius: 50px;
+                margin-left: 2%;
+                    padding-bottom: 25vh;    
+                    box-shadow: rgba(0, 0, 0, 0.35) -10px 15px 25px;
+                        
+      
+}
+
+.Cards h2{
+    cursor: pointer;
+    background-image: url(../cursor.png);
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: top right;  
+    margin-left: 1%; 
+    color: white;
+}
+
+.point{
+    margin-left: -10px; 
+    margin-top: -5px;
+}
+
+
+.A-esquerdo, .B-esquerdo, .C-Meio{
+    font-size: 0.5rem;
+    cursor: pointer; 
+}
+
+.A-esquerdo{
+    width: 400px;
+    height: 100%;
+    background-image: url(../A-esq.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    border-radius: 25px;
+    margin-top: 6%;
+        
+}
+    .fig{
+        width: 100%;
+        height: 100%;
+        color: #9b816c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.664);
+            border-radius: 25px;
+                transition: 500ms;
+           
+        
+    }
+
+
+    .texto{
+        padding: 5%;
+        font-size: 1.2rem;
+    }
+
+    
+        
+
+        .A-esquerdo .fig{
+            opacity: 1;
+        }
+        .B-esquerdo .fig{
+            opacity: 1;
+        }
+        .C-Meio .fig{
+            opacity: 1;
+        }
+        .mais .fig{
+            opacity: 1;
+
+        }
+
+
+
+/*Figura preta com o texto*/
+
+.B-esquerdo{
+    width: 400px;
+    height: 100%;
+    background-image: url(../B-esq.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    border-radius: 25px;
+    margin-left: 4.5vw;
+        margin-top: 6%;
+}
+
+.C-Meio{
+    width: 400px;
+    height: 100%;
+    background-image: url(../vecteezy_indigenous-cultures-unite-through-traditional-clothing-and_24582955_657.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    border-radius: 25px;
+    margin-left: 4.5vw;
+}
+
+    .mais{
+    width: 200px;
+    height: 10%;
+    margin-left: 4.5vw;
+    margin-top: 30vh;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: 1s ;
+        height: 50px;
+
+   
+}
+
+.mais a {
+    color: #9b816c
+}
+
+.mais:hover{
+    font-size: 1.6rem;
+}
+
+
+
+
+/* cards de explicação */
+
+
+
+
+
+
+@media screen and (min-width:1588px){
+    .txt h2 {
+        margin-top: 15%;
+    }
+
+}
+
+    @media screen and (max-width:1432px){
+        .txt h2{
+            margin-left: 38%;
+        }
+
+        .txt h3{
+            margin-left:39% ;
+        }
+
+        
+
+
+
+    }
+
+
+
+@media screen and (max-width:1234px){
+    .cabecalho{
+        display: flex;
+        flex-direction: column;
+        height: 170vh;
+        border-bottom: none;
+    }
+
+    .txt h2{
+        margin-top: 20px;
+    }
+    .txt h1{
+        font-size: 4rem;
+    }
+
+    .txt{
+        width: 100%;
+        height: 70%;
+        
+    }
+    .img{
+        width: 100%;
+        height: 30%;
+       
+    }
+    .logo-tipo{
+        display: flex;
+        margin-bottom: -8%;
+        height: 4%;
+        margin-left: 12%;
+        font-family: 'Comfortaa', sans-serif;
+        font-size: 4rem;
+    }
+                   .Cards{
+                    width: 100vw;
+                    display: grid;
+                       flex-direction: column;
+                       height: auto;
+                       margin-left: -0.5%;
+                   }
+               
+                       .A-esquerdo, .B-esquerdo, .C-Meio{
+                           width: 90%;
+                           height: 30vh;
+                           margin-top:3%;
+                       }
+                       
+
+
+
+                    .A-esquerdo{                    
+                    margin-left: 4.5vw;          
+                                }
+
+
+                
+     div.mais:hover::before {
+        width: 200px;
+       height: 50px;
+    }
+
+}
+@media screen and (max-height:771px)
+{
+    .txt h1{
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width:717px) {
+    .txt h2{
+        color:#d1d1d1 ;
+        font-size: 2rem;
+        margin-left:6%;
+        margin-top: 16%;
+    }
+
+    .txt h3{
+        color: white;
+        font-weight: bold;
+        font-size: 1.4rem;
+        margin-top: 1%;
+        margin-left: 1%;
+        width: 80%;
+    }
+    .texto{
+        font-size: 1rem;
+    }
+}
+
+
+@media screen and (max-width:451px){
+        body{
+            width:451px ;
+        }
+
+}
+
+@media screen and(max-width:490){
+    .texto{
+        font-size: 0.7rem;
+    }
+}
+
+
+        
+
+                              
+           
+           /*Testes exagerados de midia screen*/
+
+
+
+           /*.iv{
+            width: 100%;
+            height: 10%;
+            opacity: 0;
+           }*/
+    

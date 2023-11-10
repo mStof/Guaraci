@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Cadastro</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            --text-color: #fff;
+            --bg-color:#2d431f;
+            --primary-green: #576e2b;
+            --second-green: #192F10;  
+        }
+        body{
+            display: grid;
+            height: 100vh;
+            background-image: url(../../img/Image_L_&_C/Background_down.svg);
+            background-repeat: repeat-X;
+            background-size: 450px;
+            background-position: bottom;
+            background-color:var(--bg-color) ;
+            
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+        .card{
+            place-self: center;
+
+            width: 80%;
+            max-width: 450px;
+            height: 60vh;
+            /* min-height: 50vh; */
+            perspective: 1000px;
+            display: grid;
+        }
+        .card-flip{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s 1s;
+            transform-style: preserve-3d;
+        }
+        input[type='checkbox']:checked + .card-flip{
+            transform: rotateY(180deg);
+        }
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background-color: var(--primary-green);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            color: var(--text-color);
+            
+
+        }
+        .card-front{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+            
+        }
+        .card-front h1{
+            position: relative;
+            top: 15px;
+        }
+        .card-front label{
+            align-self: flex-start;
+            margin-left: 10%;
+            transform: translate(5px, 35px);
+            transition: transform 300ms ease;
+        }
+        * input:focus + label {
+            transform: translate(0px, 10px);
+
+        }
+
+        .card-front :where(input[type='email'], input[type='password']){
+            background: none;
+            width: 80%;
+            border: none;
+            border-bottom: 3.5px solid var(--second-green);            
+            outline: none;
+            font-size: 1.1rem;
+            color: var(--text-color);
+            padding: 0px 5px;
+        }
+        .google{
+            width: 80%;
+            height: 35px;
+            background-color: #eee;
+            border-radius: 10px;
+            order: 7;
+        }
+        input[type='checkbox']{
+            display: none;
+        }
+        .toggle{
+            order: 8;
+            width: 50px;
+            height: 20px;
+            border-radius: 20px;
+            background-color: var(--second-green);
+            align-self: flex-start;
+            margin-left: 10%;
+            position: relative;
+            bottom: 30px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 10px;
+            cursor: pointer;
+        }
+        .toggle::before{
+            content: 'Cadastro';
+            font-size: 1em;
+            position: absolute;
+            align-self: center;
+            font-weight: 100;
+            letter-spacing: 1px;
+            bottom: 130%;
+        }
+        input[type='checkbox']:checked + div.card-flip * label.toggle::after{
+            transform: translateX(135%);
+        }
+        .toggle::after{
+            content: '';
+            width: 50%;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            position: absolute;
+            background-color: var(--text-color);
+            transition: 350ms ease;
+        }
+        .card-front a{  
+            order: 9;
+            font-size: .7em;
+            align-self: flex-start;
+            position: relative;
+            left: 10%;
+            top: 30px;
+            color: var(--text-color);
+        }
+        input[type='submit']{
+            order: 9;
+            align-self: flex-end;
+            position: relative;
+            right: 10%;
+            bottom: 12px;
+            background-color: var(--second-green);
+            border: none;
+            padding: .5rem 30px;
+            border-radius: 5px;
+            color: var(--text-color);
+            cursor: pointer;
+            
+
+        }
+        .card-back{
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+        }
+        .card-back h1{
+            position: relative;
+            top: 15px;
+        }
+        .card-back label{
+            align-self: flex-start;
+            margin-left: 10%;
+            transform: translate(5px, 30px);
+            transition: transform 300ms ease;
+        }
+        .card-back :where(input[type='email'], input[type='password']){
+            background: none;
+            width: 80%;
+            border: none;
+            border-bottom: 3.5px solid var(--second-green);            
+            outline: none;
+            font-size: 1.1rem;
+            color: var(--text-color);
+            padding: 0px 5px;
+        }
+        .card-back input#Cadast_name{
+            width: 35%;
+            background: none;
+            align-self: flex-start;
+            margin-left: 10%;
+            border: none;
+            border-bottom: 3.5px solid var(--second-green);            
+            outline: none;
+            font-size: 1.1rem;
+            color: var(--text-color);
+            padding: 0px 5px;
+        }
+        .card-back input#Cadast_tel{
+            width: 35%;
+            background: none;
+            align-self: flex-end;
+            border: none;
+            position: relative;
+            right: 10%;
+            top: -15.6%;
+            border-bottom: 3.5px solid var(--second-green);            
+            outline: none;
+            font-size: 1.1rem;
+            color: var(--text-color);
+            padding: 0px 5px;
+        }
+        .card-back label[for='Cadast_tel']{
+            align-self: flex-start;
+            position: relative;
+            top:-15.6%;
+            left:45%;
+        }
+        .card-back .google{
+            position: relative;
+            top:-60px
+        }
+        .card-back input[type='submit']{
+            top:-38px
+        }
+        .card-back .toggle::before{
+            content: 'Login';
+        }
+    </style>
+    <link rel="stylesheet" href="../../css/nav.css">
+    <style>
+        :root{
+             /* Nav color */
+             --color: #fff;
+        }
+    </style>
+</head>
+<body>
+    
+    <input class="nav_btn_inp" type="checkbox" name="nav_btn" id="nav_btn">
+    <div class="nav_container">
+        <div class="nav_normal">
+            <label for="nav_btn">
+                <span></span>
+            </label>
+            <nav class="nav_bar">
+                <ul>
+                    <li><a href="../Conceito/site/index_construção.html">Conceito</a></li>
+                    <li><a href="#">link2</a></li>
+                    <li><a href="#">link3</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="nav_open">
+            <div class="div_config">
+                <div class="mudar_idioma">
+                    <img src="../../img/Brazil_flag_dark.svg" alt="Brazil_flag">
+                </div>
+                <div class="mudar_modo">
+                    <input type="checkbox" name="ipt_modo" id="ipt_modo">
+                    <label for="ipt_modo">
+                        <div class="btn_toggle"></div>
+                    </label>
+                </div>
+                <h1 class="homa">
+                    <a href="../../index.html">
+                        <span>H</span>
+                        <span>o</span>
+                        <span>m</span>
+                        <span>e</span>
+                    </a>
+                </h1>
+            </div>
+            <div class="div_links">
+                <ul>
+                    <li><h2 class="login"><a href="../Login & Cadastro/login_cadastro.html">Login</a></h2></li>
+                    <li><h2 class="link"><a href="">Link</a></h2></li>
+                    <li><h2 class="link"><a href="../sobre/sobre.html">Ajuda</a></h2></li>
+                    <li><h2 class="link"><a href="../Desenvolvedores/creditos.html">Créditos</a></h2></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+ 
+
+    <div class="card">
+        <input type="checkbox" name="girar" id="girar">
+        <div class="card-flip">
+            <form method="post" class="card-front">
+                <h1>Login</h1>
+                <input onblur='focar(0, this)' type="email" name="email" id="Login_email" style="order: 2;">
+                <label for="Login_email" style="order: 1;">Email:</label>
+
+                <input onblur='focar(1, this)'type="password" name="password" id="Login_password" style="order: 4;">
+                <label for="Login_password" style="order: 3;">Senha:</label>
+
+                <div class="google"></div>
+
+                <label for="girar" class="toggle"></label>
+
+                <a href="#">Esqueceu a Senha</a>
+                <input type="submit" value="Enviar">
+            </form>
+            <form class="card-back">
+                <h1>Cadastro</h1>
+                <input onblur='focar(0, this)' type="email" name="email" id="Cadast_email" style="order: 2;">
+                <label for="Cadast_email" style="order: 1;">Email:</label>
+
+                <input type="password" name="password" id="Cadast_password" style="order: 4;">
+                <label for="Cadast_password" style="order: 3;">Senha:</label>
+
+                <input type="text" name="name" id="Cadast_name" style="order: 6;">
+                <label for="Cadast_name" style="order: 5;">Nome:</label>
+                
+                <input type="tel" name="tel" id="Cadast_tel" style="order: 8;">
+                <label for="Cadast_tel" style="order: 7;">Telefone:</label>
+
+                <div class="google" style="order: 9;"></div>
+
+                <label for="girar" class="toggle" style="order: 10;"></label>
+
+                <input type="submit" value="Enviar" style="order: 11;">
+
+            </form>
+        </div>
+    </div>
+
+    <script>
+
+        const focar = (i, input) => {
+            console.log('here')
+            let label = document.querySelectorAll('.card input + label')[i];
+            if (input.value != '') {
+                label.style.transform = `translate(${0}px, ${10}px)`; //Em cima
+            }
+            else {
+                label.style.transform = `translate(${5}px, ${35}px)`; // Em baixo
+            }
+
+
+        }
+    </script>
+</body>
+</html>

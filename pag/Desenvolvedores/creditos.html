@@ -3,19 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produção - [Nome do site]</title>
-    <link rel="stylesheet" href="css/menu.css">
+    <title>Produção - Guaraci</title>
 
     <style>
-
-ul.menu > li.active{
-    outline: 3px solid #fff;
-    outline-offset: 3px;
-}
-ul.menu > li.active ul.subMenu{
-    transform: translateX(00px);
-
-}
         :root{
             --bg-color: #2E4535;
         }
@@ -31,7 +21,7 @@ ul.menu > li.active ul.subMenu{
         }
         main{
             align-self: flex-end;
-            width: calc(100% - 100px); 
+            width: 100%; 
             height: 100vh;
             overflow: auto;
             position: relative;
@@ -142,147 +132,122 @@ ul.menu > li.active ul.subMenu{
         
 
     </style>
+    <link rel="stylesheet" href="../../css/nav.css">
+    <style>
+        :root{
+            --color:#fff;
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <div class="hamburguer_space"></div>
-        <div class="login"></div>
-        <ul class="menu">
-            <label for="radio_menu1">
-                <li>
-                    <a href=""></a>
-                    <input type="radio" name="radio_menu" id="radio_menu1">
-                    <ul class="subMenu">
-                        <li><a href="">Tópico1</a></li>
-                        <li><a href="">Tópico2</a></li>
-                        <li><a href="">Tópico3</a></li>
-                        <li><a href="">Tópico4</a></li>
-                        <img src="img/pexels-pixabay-459335.jpg" alt="">
-                    </ul>
-                </li>
+   
+    <input class="nav_btn_inp" type="checkbox" name="nav_btn" id="nav_btn">
+    <div class="nav_container">
+        <div class="nav_normal">
+            <label for="nav_btn">
+                <span></span>
             </label>
-            <label for="radio_menu2">
-                <li>
-                    <a href=""></a>
-                    <input type="radio" name="radio_menu" id="radio_menu2">
-
-                    <ul class="subMenu">
-                        <li><a href="">Tópico5</a></li>
-                        <li><a href="">Tópico6</a></li>
-                        <li><a href="">Tópico7</a></li>
-                        <li><a href="">Tópico8</a></li>
-                        <img src="img/pexels-pixabay-459335.jpg" alt="">
-                    </ul>
-                </li>
-            </label>
-            <label for="radio_menu3">
-                <li>
-                    <a href=""></a>
-                    <input type="radio" name="radio_menu" id="radio_menu3">
-
-                    <ul class="subMenu">
-                        <li><a href="">Tópico9</a></li>
-                        <li><a href="">Tópico10</a></li>
-                        <li><a href="">Tópico11</a></li>
-                        <li><a href="">Tópico12</a></li>
-                        <img src="img/pexels-pixabay-459335.jpg" alt="">
-                    </ul>
-                </li>
-            </label>
-            <label for="radio_menu4">
-                <li>
-                    <a href=""></a>
-                    <input type="radio" name="radio_menu" id="radio_menu4">
-
-                    <ul class="subMenu">
-                        <li><a href="">Tópico13</a></li>
-                        <li><a href="">Tópico14</a></li>
-                        <li><a href="">Tópico15</a></li>
-                        <li><a href="">Tópico16</a></li>
-                        <img src="img/pexels-pixabay-459335.jpg" alt="">
-                    </ul>
-                </li>
-            </label>
-            
-        </ul>
-        <a href="#" class="inicio">início</a>
-    </nav>
-    <div class="modal"></div>
+            <nav class="nav_bar">
+                <ul>
+                    <li><a href="../Conceito/site/index_construção.html">Conceito</a></li>
+                    <li><a href="#">link2</a></li>
+                    <li><a href="#">link3</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="nav_open">
+            <div class="div_config">
+                <div class="mudar_idioma">
+                    <img src="../../img/Brazil_flag_dark.svg" alt="Brazil_flag">
+                </div>
+                <div class="mudar_modo">
+                    <input type="checkbox" name="ipt_modo" id="ipt_modo">
+                    <label for="ipt_modo">
+                        <div class="btn_toggle"></div>
+                    </label>
+                </div>
+                <h1 class="homa">
+                    <a href="../../index.html">
+                        <span>H</span>
+                        <span>o</span>
+                        <span>m</span>
+                        <span>e</span>
+                    </a>
+                </h1>
+            </div>
+            <div class="div_links">
+                <ul>
+                    <li><h2 class="login"><a href="../Login & Cadastro/login_cadastro.html">Login</a></h2></li>
+                    <li><h2 class="link"><a href="">Link</a></h2></li>
+                    <li><h2 class="link"><a href="../sobre/sobre.html">Ajuda</a></h2></li>
+                    <li><h2 class="link"><a href="../Desenvolvedores/creditos.html">Créditos</a></h2></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <main>
         <div class="person">
             <div class="person__container">
-                <img class="person__circle" src="img/pexels-pixabay-459335.jpg" alt="" >
-                <img class="person__img" src="img/Our_image/perfil.png" alt="My image" >
+                <img class="person__circle" src="../../img/Desenvolvedores/pexels-pixabay-459335.jpg" alt="" >
+                <img class="person__img" src="../../img/Desenvolvedores/Our_image/perfil.png" alt="My image" >
             </div>
             <div class="info">
-                <a target="_blank" rel="noopener noreferrer" href="https://github.com/mStof"><img src="img/Logos/github_white_logo.png" alt="Github_icon"></a>
-                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/_mstofel/"><img src="img/Logos/instagram_logo.png" alt="Instagram_Icon"></a>
-                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/_Matt231"><img src="img/Logos/twitter_logo.png" alt="Twitter_icon"></a>
-                <a target="_blank" rel="noopener noreferrer" href="mailto:mateus.stofel.brito@gmail.com"><img src="img/Logos/Email_logo.png" alt="Email_icon"></a>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/mStof"><img src="../../img/Desenvolvedores/Logos/github_white_logo.png" alt="Github_icon"></a>
+                <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/_mstofel/"><img src="../../img/Desenvolvedores/Logos/instagram_logo.png" alt="Instagram_Icon"></a>
+                <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/_Matt231"><img src="../../img/Desenvolvedores/Logos/twitter_logo.png" alt="Twitter_icon"></a>
+                <a target="_blank" rel="noopener noreferrer" href="mailto:mateus.stofel.brito@gmail.com"><img src="../../img/Desenvolvedores/Logos/Email_logo.png" alt="Email_icon"></a>
                 
             </div>
         </div>
         <div class="person">
             <div class="person__container">
-                <img class="person__circle" src="img/pexels-pixabay-459335.jpg" alt="" >
-                <img class="person__img" src="img/Our_image/perfil.png" alt="My image" >
+                <img class="person__circle" src="../../img/Desenvolvedores/pexels-pixabay-459335.jpg" alt="" >
+                <img class="person__img" src="../../img/Desenvolvedores/Our_image/perfil.png" alt="My image" >
             </div>
             <div class="info">
-                <a href="https://github.com/mStof"><img src="img/Logos/github_white_logo.png" alt="Github_icon"></a>
-                <a href="https://www.instagram.com/_mstofel/"><img src="img/Logos/instagram_logo.png" alt="Instagram_Icon"></a>
-                <a href="https://twitter.com/_Matt231"><img src="img/Logos/twitter_logo.png" alt="Twitter_icon"></a>
-                <a href="mailto:mateus.stofel.brito@gmail.com"><img src="img/Logos/Email_logo.png" alt="Email_icon"></a>
+                <a href="https://github.com/mStof"><img src="../../img/Desenvolvedores/Logos/github_white_logo.png" alt="Github_icon"></a>
+                <a href="https://www.instagram.com/_mstofel/"><img src="../../img/Desenvolvedores/Logos/instagram_logo.png" alt="Instagram_Icon"></a>
+                <a href="https://twitter.com/_Matt231"><img src="../../img/Desenvolvedores/Logos/twitter_logo.png" alt="Twitter_icon"></a>
+                <a href="mailto:mateus.stofel.brito@gmail.com"><img src="../../img/Desenvolvedores/Logos/Email_logo.png" alt="Email_icon"></a>
             </div>
         </div>
         <div class="person">
             <div class="person__container">
-                <img class="person__circle" src="img/pexels-pixabay-459335.jpg" alt="" >
-                <img class="person__img" src="img/Our_image/perfil.png" alt="My image" >
+                <img class="person__circle" src="../../img/Desenvolvedores/pexels-pixabay-459335.jpg" alt="" >
+                <img class="person__img" src="../../img/Desenvolvedores/Our_image/perfil.png" alt="My image" >
             </div>
             <div class="info">
-                <a href="https://github.com/mStof"><img src="img/Logos/github_white_logo.png" alt="Github_icon"></a>
-                <a href="https://www.instagram.com/_mstofel/"><img src="img/Logos/instagram_logo.png" alt="Instagram_Icon"></a>
-                <a href="https://twitter.com/_Matt231"><img src="img/Logos/twitter_logo.png" alt="Twitter_icon"></a>
-                <a href="mailto:mateus.stofel.brito@gmail.com"><img src="img/Logos/Email_logo.png" alt="Email_icon"></a>
+                <a href="https://github.com/mStof"><img src="../../img/Desenvolvedores/Logos/github_white_logo.png" alt="Github_icon"></a>
+                <a href="https://www.instagram.com/_mstofel/"><img src="../../img/Desenvolvedores/Logos/instagram_logo.png" alt="Instagram_Icon"></a>
+                <a href="https://twitter.com/_Matt231"><img src="../../img/Desenvolvedores/Logos/twitter_logo.png" alt="Twitter_icon"></a>
+                <a href="mailto:mateus.stofel.brito@gmail.com"><img src="../../img/Desenvolvedores/Logos/Email_logo.png" alt="Email_icon"></a>
             </div>
         </div>
         <div class="person">
             <div class="person__container">
-                <img class="person__circle" src="img/pexels-pixabay-459335.jpg" alt="" >
-                <img class="person__img" src="img/Our_image/perfil.png" alt="My image" >
+                <img class="person__circle" src="../../img/Desenvolvedores/pexels-pixabay-459335.jpg" alt="" >
+                <img class="person__img" src="../../img/Desenvolvedores/Our_image/perfil.png" alt="My image" >
             </div>
             <div class="info">
-                <a href="https://github.com/mStof"><img src="img/Logos/github_white_logo.png" alt="Github_icon"></a>
-                <a href="https://www.instagram.com/_mstofel/"><img src="img/Logos/instagram_logo.png" alt="Instagram_Icon"></a>
-                <a href="https://twitter.com/_Matt231"><img src="img/Logos/twitter_logo.png" alt="Twitter_icon"></a>
-                <a href="mailto:mateus.stofel.brito@gmail.com"><img src="img/Logos/Email_logo.png" alt="Email_icon"></a>
+                <a href="https://github.com/mStof"><img src="../../img/Desenvolvedores/Logos/github_white_logo.png" alt="Github_icon"></a>
+                <a href="https://www.instagram.com/_mstofel/"><img src="../../img/Desenvolvedores/Logos/instagram_logo.png" alt="Instagram_Icon"></a>
+                <a href="https://twitter.com/_Matt231"><img src="../../img/Desenvolvedores/Logos/twitter_logo.png" alt="Twitter_icon"></a>
+                <a href="mailto:mateus.stofel.brito@gmail.com"><img src="../../img/Desenvolvedores/Logos/Email_logo.png" alt="Email_icon"></a>
             </div>
         </div>
         <div class="person">
             <div class="person__container">
-                <img class="person__circle" src="img/pexels-pixabay-459335.jpg" alt="" >
-                <img class="person__img" src="img/Our_image/perfil.png" alt="My image" >
+                <img class="person__circle" src="../../img/Desenvolvedores/pexels-pixabay-459335.jpg" alt="" >
+                <img class="person__img" src="../../img/Desenvolvedores/Our_image/perfil.png" alt="My image" >
             </div>
             <div class="info">
-                <a href="https://github.com/mStof"><img src="img/Logos/github_white_logo.png" alt="Github_icon"></a>
-                <a href="https://www.instagram.com/_mstofel/"><img src="img/Logos/instagram_logo.png" alt="Instagram_Icon"></a>
-                <a href="https://twitter.com/_Matt231"><img src="img/Logos/twitter_logo.png" alt="Twitter_icon"></a>
-                <a href="mailto:mateus.stofel.brito@gmail.com"><img src="img/Logos/Email_logo.png" alt="Email_icon"></a>
+                <a href="https://github.com/mStof"><img src="../../img/Desenvolvedores/Logos/github_white_logo.png" alt="Github_icon"></a>
+                <a href="https://www.instagram.com/_mstofel/"><img src="../../img/Desenvolvedores/Logos/instagram_logo.png" alt="Instagram_Icon"></a>
+                <a href="https://twitter.com/_Matt231"><img src="../../img/Desenvolvedores/Logos/twitter_logo.png" alt="Twitter_icon"></a>
+                <a href="mailto:mateus.stofel.brito@gmail.com"><img src="../../img/Desenvolvedores/Logos/Email_logo.png" alt="Email_icon"></a>
             </div>
         </div>
-
-        
     </main>
-
-    <script>
-      function RemoveCheck(clique) {
-        console.log(clique.target.childNodes[3].checked)
-        clique.target.childNodes[3].checked = (clique.target.childNodes[3].checked == true) ? false : true
-        console.log(clique.target.childNodes[3].checked)
-    }
-      document.addEventListener('mouseup', RemoveCheck)
-    </script>
-    <script src="../Login & Cadastro/menu.js"></script>
 </body>
 </html>

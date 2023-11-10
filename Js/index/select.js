@@ -1,5 +1,9 @@
 const select_lingua = document.querySelector("select#select_lingua");
 const select_mode = document.querySelector("select#select_modo");
+
+select_mode.addEventListener('change', () => {
+    localStorage.setItem('mode', select_mode.value)
+})
       
 select_lingua.addEventListener("change", () => {
 let Flags = {
