@@ -28,6 +28,9 @@
         font-size: 12rem;
         transform: translateY(-30%);
     }
+    nav{
+        transform: translateX(100px);
+    }
 }
 
 @media (max-width: 350px) {
