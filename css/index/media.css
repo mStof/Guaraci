@@ -26,6 +26,7 @@
     }
     #sol h1{
         font-size: 12rem;
+        transform: translateY(-30%);
     }
 }
 
