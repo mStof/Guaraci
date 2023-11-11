@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 :root{
   --color: #000;
@@ -16,7 +17,7 @@
   width: 100vw;
   height: auto;
   position: fixed;
-  z-index: 1;
+  z-index: 9;
   transform-origin: left;
   overflow: hidden;
   font-weight: 300;
