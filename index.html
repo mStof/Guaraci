@@ -48,7 +48,7 @@
 
       color: var(--text-color);
       font-weight: 100;
-      font-size: 9.5rem;
+      font-size: clamp(5rem, 20vw + 1rem, 9.5rem);
       text-shadow: 0px -5px 10px rgba(0, 0, 0, 0.50);
 
       position: relative;
@@ -94,7 +94,7 @@
       align-items: center;
       /* justify-content: flex-end; */
       list-style: none;
-      font-size: 10rem;
+      font-size: clamp(5rem ,20vw + 1rem,10rem);
       gap: 20vh;
       position: relative;
       top: 50%;
@@ -115,13 +115,13 @@
     }
     nav ul li a.secundary{
       color: #fff7;
-      font-weight: 8rem;
     }
     nav ul li a.secundary:hover{
       color: var(--text-color);
     }
     nav .material-symbols-rounded{
       position: fixed;
+      /* inset: 0px 0px 0px -80%; */
       font-size: 5rem;
       user-select: none;
       color: var(--text-color);

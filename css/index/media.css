@@ -6,16 +6,12 @@
 }
 
 @media (orientation: landscape) and (max-width: 451px), (max-width: 451px) {
-    html{
-        font-size: 8px;
-    }
     body{
         background: var(--primary-blue);
         gap: 100px;
     }
     
     #title{
-        font-size: 25vw;
         top: 75px;
     }
     #title::before{
@@ -24,12 +20,9 @@
     #sol img{
         top: 32%;
     }
-    #sol h1{
-        font-size: 12rem;
-        transform: translateY(-30%);
-    }
     nav{
-        transform: translateX(100px);
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
@@ -46,6 +39,6 @@
         right: 10px;
     }
     #sol h1{
-        font-size: 9.5rem;
+        /* font-size: 5rem; */
     }
 }

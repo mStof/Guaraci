@@ -20,7 +20,7 @@
     font-family: Italiana;
     font-style: normal;
     font-weight: 400;
-    font-size: 8rem;
+    font-size: clamp(5rem, 20vmin + 1rem ,8rem);
     text-decoration-line: underline;
 
     cursor: pointer;
