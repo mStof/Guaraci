@@ -3,11 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
 }
 :root{
   --color: #000;
+  --navBg-color: #e5c3b5;
 }
+
 .nav_container{
   display: flex;
   align-items: center;
@@ -21,20 +22,28 @@
   transform-origin: left;
   overflow: hidden;
   font-weight: 300;
-  opacity: .3;
-  transition: opacity 300ms;
+  transition: background-color 200ms;
+  box-shadow: none;
 }
-.nav_container:hover{
-  opacity: 1;
+.nav_active{
+  background-color: var(--navBg-color);
+  --color: #f5f5f5;
+  box-shadow: 0px 0px 5px 3.5px #0007;
+
 }
 .nav_container .nav_normal{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  height: 100px;
-  width: 100%;
-  position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    height: 100px;
+    width: 100%;
+    padding: 0px min(10vw, 100px);
+    position: relative;
+}
+.invisible{
+  width: 75px;
+  height: 50px;
 }
 .nav_container::after{
   content: '';
@@ -59,16 +68,16 @@
   width: 95%;
   background-color: var(--color);
   border-radius: 50px;
+  opacity: 0;
   height: 2px;
   z-index: 2;
 }
 .nav_btn_inp {
   display: none;
 }
-label[for='nav_btn'] {
+.nav_btn {
   width: 75px;
   height: auto;
-  margin-left: 100px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -77,26 +86,31 @@ label[for='nav_btn'] {
   position: relative;
   isolation: isolate;
 }
-label[for='nav_btn']::before,
-label[for='nav_btn'] > span,
-label[for='nav_btn']::after{
-  content: '';
-  width: 100%;
-  height: 2px;
-  border-radius: 0px 100px 100px 0px;
-  background-color: var(--color);
+.nav_btn::before,
+.nav_btn > span,
+.nav_btn::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    border-radius: 0px 100px 100px 0px;
+    background-color: var(--color);
 }
-label[for='nav_btn'] span{
-  width: 75%;
+.nav_btn span{
+    width: 75%;
 }
-label[for='nav_btn']::after {
-  width: 50%;
+.nav_btn::after {
+    width: 50%;
 }
 .nav_bar{
-  display: flex;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
   align-items: center;
-  margin-right: 100px;
   isolation: isolate;
+}
+.disappear{
+  opacity: 1;
+  display: none;
 }
 .nav_bar ul{
   display: flex;
@@ -358,10 +372,8 @@ label[for='nav_btn']::after {
 @media (max-width: 600px) {
   .nav_bar{
     display: none;
-    
   }
-  label[for='nav_btn']{
-    margin-left:calc(2.5% + 20px) ;
+  .nav_btn{
+    margin-left:0;
   }
 }
-

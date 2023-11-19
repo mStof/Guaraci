@@ -21,16 +21,17 @@
     <input class="nav_btn_inp" type="checkbox" name="nav_btn" id="nav_btn">
     <div class="nav_container">
         <div class="nav_normal">
-            <label for="nav_btn">
+            <label for="nav_btn" class="nav_btn disappear">
                 <span></span>
             </label>
-            <nav class="nav_bar">
+            <nav class="nav_bar disappear">
                 <ul>
                     <li><a href="../Conceito/site/index_construction.html">Concept</a></li>
                     <li><a href="../Rituais/index_rituais.html">Rites</a></li>
                     <li><a href="#">link3</a></li>
                 </ul>
             </nav>
+            <div class="invisible"></div>
         </div>
         <div class="nav_open">
             <div class="div_config">
@@ -55,7 +56,7 @@
             <div class="div_links">
                 <ul>
                     <li><h2 class="login"><a href="../Login & Cadastro/login_cadastro_em.html">Login</a></h2></li>
-                    <li><h2 class="link"><a href="">Link</a></h2></li>
+                    <li><h2 class="link"><a href="../Conceito/site/index_construction.html">Conceito</a></h2></li>
                     <li><h2 class="link"><a href="../sobre/about.html">Help</a></h2></li>
                     <li><h2 class="link"><a href="../Desenvolvedores/creditos_em.html">Credits</a></h2></li>
                 </ul>
@@ -231,5 +232,22 @@
 
     
             <script src="about.js"></script>
+            <script>
+                const test = () => {
+                let nav = document.querySelector('.nav_container')
+                nav.classList.add('nav_active')
+
+                let navLinks = document.querySelector('.nav_normal .nav_bar')
+                navLinks.classList.remove('disappear')
+
+                let navMenu = document.querySelector('.nav_normal label')
+                navMenu.classList.remove('disappear')
+
+                let lineBefore = document.styleSheets[document.styleSheets.length - 1].cssRules[8]
+                lineBefore.style.opacity = 1
+            }
+
+               test()
+            </script>
 </body>
 </html>

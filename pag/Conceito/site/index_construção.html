@@ -4,19 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width , initial-scale=1.0">
     <title>Guaraci</title>
-    <title ></title>
     <link rel="stylesheet" href="index.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-<link rel="stylesheet" href="../../../css/nav.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="../../../css/nav.css">
 
 
 </head>
@@ -24,16 +20,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/
     <input class="nav_btn_inp" type="checkbox" name="nav_btn" id="nav_btn">
     <div class="nav_container">
         <div class="nav_normal">
-            <label for="nav_btn">
+            <label for="nav_btn" class="nav_btn disappear">
                 <span></span>
             </label>
-            <nav class="nav_bar">
+            <nav class="nav_bar disappear">
                 <ul>
                     <li><a href="../../Conceito/site/index_construção.html">Conceito</a></li>
                     <li><a href="../../Rituais/index_rituais.html">Rituais</a></li>
                     <li><a href="#">link3</a></li>
                 </ul>
             </nav>
+            <div class="invisible"></div>
         </div>
         <div class="nav_open">
             <div class="div_config">
@@ -58,7 +55,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/
             <div class="div_links">
                 <ul>
                     <li><h2 class="login"><a href="../../Login & Cadastro/login_cadastro.html">Login</a></h2></li>
-                    <li><h2 class="link"><a href="">Link</a></h2></li>
+                    <li><h2 class="link"><a href="../Conceito/site/index_construção.html">Conceito</a></h2></li>
                     <li><h2 class="link"><a href="../../sobre/sobre.html">Ajuda</a></h2></li>
                     <li><h2 class="link"><a href="../../Desenvolvedores/creditos.html">Créditos</a></h2></li>
                 </ul>
@@ -140,5 +137,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/EaselPlugin.min.js"></script>
 
       <script src="index.js"></script>
+      <script src="../../../Js/nav.js"></script>
 </body>
 </html>
