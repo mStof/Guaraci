@@ -12,7 +12,9 @@ function mecanismo () {
     navMenu.classList.toggle('disappear', scrollY == 0)
     
     // add a linha pra separar
-    let lineBefore = document.styleSheets[document.styleSheets.length - 1].cssRules[8]
+    let newArray = Object.keys(document.styleSheets).map(e => document.styleSheets[e])
+    let navCss = newArray.findIndex((e) => e.href === "https://mstof.github.io/Projeto-integrador/css/nav.css") // o number do nav.css
+    let lineBefore = document.styleSheets[navCss].cssRules[8]
     lineBefore.style.opacity = (scrollY > 0) ? 1 : 0
 
     // fecha o menu qnd estiver no topo
