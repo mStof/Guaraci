@@ -20,7 +20,7 @@ let Flags = {
     let links = {
         nomes_ing:['Rites', 'Concept', 'Login', 'Help', 'Credits'],
 
-        links_ing:['pag/Rituais/index_rituais.html',
+        links_ing:['pag/Rituais/index_rituais_em.html',
                     'pag/Conceito/site/index_construction.html',
                     'pag/Login & Cadastro/login_cadastro_em.html',
                     'pag/sobre/about.html', 

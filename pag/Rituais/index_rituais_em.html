@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rites - Guaraci</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            --bg-color: #441016;
+            --primary-red: #d1432b;
+            --secondy-red: #5F292C;
+            --tirth-red: #FFA783;
+            --text-color:#fff;
+        }
+        body{
+            background-color: var(--bg-color);
+            height: 100vh;
+            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+        }
+        .container_h1{
+            width: 100%;
+            height: 500px;
+            display: grid;
+            place-content: center;
+            position: relative;
+        }
+            
+        .container_h1::after{
+            content: '';
+            width: 0;
+            height: 0;
+            border-bottom: 30vw solid transparent;
+            /* border-left: 400px solid yellow; */
+            border-right: 30vw solid var(--primary-red);
+            place-self: start end ;
+            position: absolute;
+        }
+
+        .container_h1 h1{
+            color: var(--primary-red);
+            font-size: 8rem;
+            letter-spacing: 64px;
+            text-align: center;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+        }
+        .container_h1 h1::after{
+            /* barra */
+            content: '';
+            position: absolute;
+            inset: 65% 0 0 0;
+            width: 80vw;
+            height: 30px;
+            background-color: var(--primary-red);
+        }
+        .container_h1 h1::before{
+            /* triangulo */
+            content: '';
+            position: absolute;
+            inset: 58% 0 0 -20px;
+            border-left: 70px solid transparent;
+            border-bottom: 100px solid var(--primary-red);
+            border-right: 70px solid transparent;
+            transform: rotate(90deg);
+            width: 0;
+            height: 0;
+        }
+        .container{
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            overflow: auto;
+            flex-wrap: wrap;
+            gap: 50px;
+            padding-bottom: 50px;
+        }
+        .card{
+            width: 348px;
+            height: 581px;
+            background-color: var(--secondy-red);
+            border-radius: 17px;
+            position: relative;
+            overflow: hidden;
+
+        }
+        .card::after{
+            content: '';
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            inset: 100%;
+            transform: translate(-50%, -50%);
+            background-color: var(--tirth-red);
+            border-radius: 50%;
+            transition: scale 600ms;
+            z-index: 0;
+        }
+        .card:hover{
+            color: #000;
+        }
+        .card:hover::after{
+            scale: 15;
+            
+            transform: translate(0%, 0%);
+        }
+        .card img{
+            width: 100%;
+            height: 30%;
+            border-radius: 17px 17px 0px 0px;
+            object-fit: cover;
+            z-index: 1;
+            position: relative;
+        }
+        .card article{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            gap: 20px;
+            z-index: 1;
+            position: relative;
+            transition: color 500ms;
+        }
+        .card article h1{
+            font-size: 2.5rem;
+            text-align: center;
+            letter-spacing: 10px;
+            font-weight: 500;
+            
+            text-transform: uppercase;
+        }
+        .card article p{
+            font-weight: 300;
+            text-align: center;
+            font-size: 1em;
+            line-height: 150%;
+            letter-spacing: 1px;
+            width: 80%;
+        }
+        @media (max-width:950px) {
+            .container_h1 h1{
+                font-size: 6rem;
+                letter-spacing: 3vw;
+            }
+        }
+        @media (max-width: 550px) {
+            .container_h1 h1{
+                font-size: 4rem;
+                letter-spacing: 3vw;
+            }
+        }
+        @media (max-width: 350px) {
+            .container_h1 h1{
+                font-size: 3.5rem;
+                
+                top: -50px;
+                letter-spacing: 3vw;
+            }
+        }
+
+    </style>
+    <link rel="stylesheet" href="../../css/nav.css">
+</head>
+<body>
+    <input class="nav_btn_inp" type="checkbox" name="nav_btn" id="nav_btn">
+    <div class="nav_container">
+        <div class="nav_normal">
+            <label for="nav_btn" class="nav_btn disappear">
+                <span></span>
+            </label>
+            <nav class="nav_bar disappear">
+                <ul>
+                    <li><a href="../Conceito/site/index_construction.html">Concept</a></li>
+                    <li><a href="../Rituais/index_rituais.html">Rites</a></li>
+                    <li><a href="#">link3</a></li>
+                </ul>
+            </nav>
+            <div class="invisible"></div>
+        </div>
+        <div class="nav_open">
+            <div class="div_config">
+                <div class="mudar_idioma">
+                    <a href="index_rituais.html"><img src="../../img/Brazil_flag_dark.svg" alt="Brazil_flag"></a>
+                </div>
+                <div class="mudar_modo">
+                    <input type="checkbox" name="ipt_modo" id="ipt_modo">
+                    <label for="ipt_modo">
+                        <div class="btn_toggle"></div>
+                    </label>
+                </div>
+                <h1 class="homa">
+                    <a href="../../index.html">
+                        <span>H</span>
+                        <span>o</span>
+                        <span>m</span>
+                        <span>e</span>
+                    </a>
+                </h1>
+            </div>
+            <div class="div_links">
+                <ul>
+                    <li><h2 class="login"><a href="../Login & Cadastro/login_cadastro_em.html">Login</a></h2></li>
+                    <li><h2 class="link"><a href="../Conceito/site/index_construction.html">Concept</a></h2></li>
+                    <li><h2 class="link"><a href="../sobre/about.html">Help</a></h2></li>
+                    <li><h2 class="link"><a href="../Desenvolvedores/creditos_em.html">Credits</a></h2></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container_h1">
+        <h1>Rites</h1>
+    </div>
+    <main class="container">
+        <div class="card">
+            <img src="../../img/Rituais/Bororo.jpg" alt="Bororo">
+            <article>
+                <h1>Bororo</h1>
+                <p>
+                    The Bororo Funeral Ritual (MT) marks a special moment of socialization of young people.
+                    Not only because many of them are formally started, but also because it is through their participation in the corners,
+                    Dances, hunts and collective fisheries that they have the opportunity to learn and perceive the richness of their culture.
+                </p>
+            </article>
+        </div>
+        <div class="card">
+            <img src="../../img/Rituais/Krahô.jpg" alt="Krahô">
+            <article>
+                <h1>Krahô</h1>
+                <p>
+                    In the tree trunk race, which is related to the realization of different rituals,
+                    The Krahô (TO) are divided into two teams, said "halves". Each one of them
+                    carries a buriti trunk section (or other vegetable), whose format,
+                    size and ornamentation are variable
+                </p>
+            </article>
+        </div>
+        <div class="card">
+            <img src="../../img/Rituais/Newê.jpg" style="object-position: 0px -100px;" alt="Newê">
+            <article>
+                <h1>Enawenê-Nawê</h1>
+                <p>
+                    No Yãkwa, performed ritual by Enawenê-Nawê (MT), the inhabitants of the village,
+                    Divided into clans, make a widespread exchange of food, singing and dances.
+                    Ritual, which lasts several months and has two distinct phases,
+                    It aims to fulfill the teachings of the underground Spirits, Yakairiti.
+                </p>
+            </article>
+        </div>
+        <div class="card">
+            <img src="../../img/Rituais/Karajá.jpg" alt="Karajá">
+            <article>
+                <h1>Karajá</h1>
+                <p>
+                    The first initiation of the Karajá Boys (MT/TO) is around seven or eight
+                    years old. It consists of drilling the lower lip, which will receive a adornment.
+                    Perforation is done with the clavicle of a monkey, and is in the presence of parents.
+                </p>
+            </article>
+        </div>
+        <div class="card">
+            <img src="../../img/Rituais/Yanomami.jpg" alt="Yanomami">
+            <article>
+                <h1>Yanomami</h1>
+                <p>
+                    In the Yanomami (AM) Maloca tootobi, men hold session with hallucinogenic powder,
+                    Yãkuãna. This is very present in the initiation of the Yanomami shamans, and should always be
+                    under the conduct of the elders.
+                </p>
+            </article>
+        </div>
+        <div class="card">
+            <img src="../../img/Rituais/Kanela.jpg" alt="Kanela">
+            <article>
+                <h1>Kanela</h1>
+                <p>
+                    Among the Cinnamon (MA), Timbira Group, the boys are introduced in their age class
+                    through some initiation rituals. These rituals train the boys to become
+                    Warriors. Traditionally, most girls are associated to receive belts
+                    of maturity, necessary for them to marry.
+                </p>
+            </article>
+        </div>
+        
+    </main>
+    <script src="../../Js/nav.js"></script>
+</body>
+</html>
