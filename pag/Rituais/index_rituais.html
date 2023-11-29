@@ -102,13 +102,13 @@
             transition: scale 600ms;
             z-index: 0;
         }
-        .card:hover{
-            color: #000;
-        }
         .card:hover::after{
             scale: 15;
             
             transform: translate(0%, 0%);
+        }
+        .card a{
+            text-decoration: none;
         }
         .card img{
             width: 100%;
@@ -127,6 +127,10 @@
             z-index: 1;
             position: relative;
             transition: color 500ms;
+            color: var(--text-color);
+        }
+        .card article:hover{
+            color: #000;
         }
         .card article h1{
             font-size: 2.5rem;
@@ -219,73 +223,83 @@
     </div>
     <main class="container">
         <div class="card">
-            <img src="../../img/Rituais/Bororo.jpg" alt="Bororo">
-            <article>
-                <h1>Bororo</h1>
-                <p>
-                    O ritual funerário dos Bororo (MT) marca um momento especial de socialização dos jovens. 
-                    Não só porque muitos deles são formalmente iniciados, mas, também, porque é por meio de sua participação nos cantos,
-                    danças, caçadas e pescarias coletivas que eles têm a oportunidade de aprender e perceber a riqueza de sua cultura.
-                </p>
-            </article>
+            <a href="../Conteudo/bororo-ritual.html">
+                <img src="../../img/Rituais/Bororo.jpg" alt="Bororo">
+                <article>
+                    <h1>Bororo</h1>
+                    <p>
+                        O ritual funerário dos Bororo (MT) marca um momento especial de socialização dos jovens.
+                        Não só porque muitos deles são formalmente iniciados, mas, também, porque é por meio de sua participação nos cantos,
+                        danças, caçadas e pescarias coletivas que eles têm a oportunidade de aprender e perceber a riqueza de sua cultura.
+                    </p>
+                </article>
+            </a>
         </div>
         <div class="card">
-            <img src="../../img/Rituais/Krahô.jpg" alt="Krahô">
-            <article>
-                <h1>Krahô</h1>
-                <p>
-                    Na corrida de toras, que está relacionada à realização de diferentes rituais,
-                    os Krahô (TO) dividem-se em duas equipes, ditas "metades". Cada uma delas
-                    carrega uma seção de tronco de buriti (ou outro vegetal), cujo formato,
-                    tamanho e ornamentação são variáveis
-                </p>
-            </article>
+            <a href="../Conteudo/kraho-ritual.html">
+                <img src="../../img/Rituais/Krahô.jpg" alt="Krahô">
+                <article>
+                    <h1>Krahô</h1>
+                    <p>
+                        Na corrida de toras, que está relacionada à realização de diferentes rituais,
+                        os Krahô (TO) dividem-se em duas equipes, ditas "metades". Cada uma delas
+                        carrega uma seção de tronco de buriti (ou outro vegetal), cujo formato,
+                        tamanho e ornamentação são variáveis
+                    </p>
+                </article>
+            </a>
         </div>
         <div class="card">
-            <img src="../../img/Rituais/Newê.jpg" style="object-position: 0px -100px;" alt="Newê">
-            <article>
-                <h1>Enawenê-Nawê</h1>
-                <p>
-                    No yãkwa, ritual realizado pelos Enawenê-Nawê (MT), os habitantes da aldeia,
-                    divididos em clãs, realizam uma troca generalizada de alimentos, cantos e danças.
-                    O ritual, que dura vários meses e possui duas fases distintas,
-                    visa cumprir os ensinamentos dos espíritos subterrâneos, yakairiti.
-                </p>
-            </article>
+            <a href="../Conteudo/enawene-nawe-ritual.html">
+                <img src="../../img/Rituais/Newê.jpg" style="object-position: 0px -100px;" alt="Newê">
+                <article>
+                    <h1>Enawenê-Nawê</h1>
+                    <p>
+                        No yãkwa, ritual realizado pelos Enawenê-Nawê (MT), os habitantes da aldeia,
+                        divididos em clãs, realizam uma troca generalizada de alimentos, cantos e danças.
+                        O ritual, que dura vários meses e possui duas fases distintas,
+                        visa cumprir os ensinamentos dos espíritos subterrâneos, yakairiti.
+                    </p>
+                </article>
+            </a>
         </div>
         <div class="card">
-            <img src="../../img/Rituais/Karajá.jpg" alt="Karajá">
-            <article>
-                <h1>Karajá</h1>
-                <p>
-                    A primeira iniciação dos meninos Karajá (MT/TO) se dá por volta dos sete ou oito 
-                    anos de idade. Consiste na perfuração do lábio inferior, que irá receber um adorno.
-                    A perfuração é feita com a clavícula de um macaco, e se dá na presença dos pais
-                </p>
-            </article>
+            <a href="../Conteudo/karaja-ritual.html">
+                <img src="../../img/Rituais/Karajá.jpg" alt="Karajá">
+                <article>
+                    <h1>Karajá</h1>
+                    <p>
+                        A primeira iniciação dos meninos Karajá (MT/TO) se dá por volta dos sete ou oito
+                        anos de idade. Consiste na perfuração do lábio inferior, que irá receber um adorno.
+                        A perfuração é feita com a clavícula de um macaco, e se dá na presença dos pais
+                    </p>
+                </article>
+            </a>
         </div>
         <div class="card">
-            <img src="../../img/Rituais/Yanomami.jpg" alt="Yanomami">
-            <article>
-                <h1>Yanomami</h1>
-                <p>
-                    Na maloca Toototobi, dos Yanomami (AM), homens realizam sessão com o pó alucinógeno,
-                    yãkuãna. Este é muito presente na iniciação dos pajés Yanomami, e deve sempre se dar
-                    sob a condução dos mais velhos.
-                </p>
-            </article>
+            <a href="../Conteudo/yanomami-ritual.html">
+                <img src="../../img/Rituais/Yanomami.jpg" alt="Yanomami">
+                <article>
+                    <h1>Yanomami</h1>
+                    <p>
+                        Na maloca Toototobi, dos Yanomami (AM), homens realizam sessão com o pó alucinógeno,
+                        yãkuãna. Este é muito presente na iniciação dos pajés Yanomami, e deve sempre se dar
+                        sob a condução dos mais velhos.
+                    </p>
+                </article>
+            </a>
         </div>
         <div class="card">
-            <img src="../../img/Rituais/Kanela.jpg" alt="Kanela">
-            <article>
-                <h1>Kanela</h1>
-                <p>
-                    Entre os Canela (MA), grupo Timbira, os meninos são introduzidos na sua classe de idade
-                    por meio de alguns rituais de iniciação. Esses rituais treinam os meninos para se tornarem
-                    guerreiros. Tradicionalmente, a maioria das meninas está associada de modo a receber cintos
-                    de maturidade, necessários para que elas se casem.
-                </p>
-            </article>
+            <a href="../Conteudo/kadiweu-ritual.html">
+                <img src="../../img/Rituais/kadiweu.jpg" alt="Kadiwéu" style="object-position: top;">
+                <article>
+                    <h1>Kadiwéu</h1>
+                    <p>
+                        Os Bobos (bobotegi) são personagens que figuram na Festa do navio, realizada pelos Kadiwéu. 
+                        Este longo ritual remonta aos tempos da Guerra do Paraguai, quando este povo lutou pelo Brasil.
+                    </p>
+                </article>
+            </a>
         </div>
         
     </main>

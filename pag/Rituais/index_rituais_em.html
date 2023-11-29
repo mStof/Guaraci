@@ -102,13 +102,12 @@
             transition: scale 600ms;
             z-index: 0;
         }
-        .card:hover{
-            color: #000;
-        }
         .card:hover::after{
             scale: 15;
-            
             transform: translate(0%, 0%);
+        }
+        .card a {
+            text-decoration: none;
         }
         .card img{
             width: 100%;
@@ -127,6 +126,10 @@
             z-index: 1;
             position: relative;
             transition: color 500ms;
+            color: var(--text-color);
+        }
+        .card article:hover{
+            color: #000;
         }
         .card article h1{
             font-size: 2.5rem;
@@ -220,73 +223,83 @@
     </div>
     <main class="container">
         <div class="card">
-            <img src="../../img/Rituais/Bororo.jpg" alt="Bororo">
-            <article>
-                <h1>Bororo</h1>
-                <p>
-                    The Bororo Funeral Ritual (MT) marks a special moment of socialization of young people.
-                    Not only because many of them are formally started, but also because it is through their participation in the corners,
-                    Dances, hunts and collective fisheries that they have the opportunity to learn and perceive the richness of their culture.
-                </p>
-            </article>
+            <a href="../Conteudo/bororo-ritual_em.html">
+                <img src="../../img/Rituais/Bororo.jpg" alt="Bororo">
+                <article>
+                    <h1>Bororo</h1>
+                    <p>
+                        The Bororo Funeral Ritual (MT) marks a special moment of socialization of young people.
+                        Not only because many of them are formally started, but also because it is through their participation in the corners,
+                        Dances, hunts and collective fisheries that they have the opportunity to learn and perceive the richness of their culture.
+                    </p>
+                </article>
+            </a>
         </div>
         <div class="card">
-            <img src="../../img/Rituais/Krahô.jpg" alt="Krahô">
-            <article>
-                <h1>Krahô</h1>
-                <p>
-                    In the tree trunk race, which is related to the realization of different rituals,
-                    The Krahô (TO) are divided into two teams, said "halves". Each one of them
-                    carries a buriti trunk section (or other vegetable), whose format,
-                    size and ornamentation are variable
-                </p>
-            </article>
+            <a href="../Conteudo/kraho-ritual_em.html">
+                <img src="../../img/Rituais/Krahô.jpg" alt="Krahô">
+                <article>
+                    <h1>Krahô</h1>
+                    <p>
+                        In the tree trunk race, which is related to the realization of different rituals,
+                        The Krahô (TO) are divided into two teams, said "halves". Each one of them
+                        carries a buriti trunk section (or other vegetable), whose format,
+                        size and ornamentation are variable
+                    </p>
+                </article>
+            </a>
         </div>
         <div class="card">
-            <img src="../../img/Rituais/Newê.jpg" style="object-position: 0px -100px;" alt="Newê">
-            <article>
-                <h1>Enawenê-Nawê</h1>
-                <p>
-                    No Yãkwa, performed ritual by Enawenê-Nawê (MT), the inhabitants of the village,
-                    Divided into clans, make a widespread exchange of food, singing and dances.
-                    Ritual, which lasts several months and has two distinct phases,
-                    It aims to fulfill the teachings of the underground Spirits, Yakairiti.
-                </p>
-            </article>
+            <a href="../Conteudo/enawene-nawe-ritual_em.html">
+                <img src="../../img/Rituais/Newê.jpg" style="object-position: 0px -100px;" alt="Newê">
+                <article>
+                    <h1>Enawenê-Nawê</h1>
+                    <p>
+                        No Yãkwa, performed ritual by Enawenê-Nawê (MT), the inhabitants of the village,
+                        Divided into clans, make a widespread exchange of food, singing and dances.
+                        Ritual, which lasts several months and has two distinct phases,
+                        It aims to fulfill the teachings of the underground Spirits, Yakairiti.
+                    </p>
+                </article>
+            </a>
         </div>
         <div class="card">
-            <img src="../../img/Rituais/Karajá.jpg" alt="Karajá">
-            <article>
-                <h1>Karajá</h1>
-                <p>
-                    The first initiation of the Karajá Boys (MT/TO) is around seven or eight
-                    years old. It consists of drilling the lower lip, which will receive a adornment.
-                    Perforation is done with the clavicle of a monkey, and is in the presence of parents.
-                </p>
-            </article>
+            <a href="../Conteudo/karaja-ritual_em.html">
+                <img src="../../img/Rituais/Karajá.jpg" alt="Karajá">
+                <article>
+                    <h1>Karajá</h1>
+                    <p>
+                        The first initiation of the Karajá Boys (MT/TO) is around seven or eight
+                        years old. It consists of drilling the lower lip, which will receive a adornment.
+                        Perforation is done with the clavicle of a monkey, and is in the presence of parents.
+                    </p>
+                </article>
+            </a>
         </div>
         <div class="card">
-            <img src="../../img/Rituais/Yanomami.jpg" alt="Yanomami">
-            <article>
-                <h1>Yanomami</h1>
-                <p>
-                    In the Yanomami (AM) Maloca tootobi, men hold session with hallucinogenic powder,
-                    Yãkuãna. This is very present in the initiation of the Yanomami shamans, and should always be
-                    under the conduct of the elders.
-                </p>
-            </article>
+            <a href="../Conteudo/yanomami-ritual_em.html">
+                <img src="../../img/Rituais/Yanomami.jpg" alt="Yanomami">
+                <article>
+                    <h1>Yanomami</h1>
+                    <p>
+                        In the Yanomami (AM) Maloca tootobi, men hold session with hallucinogenic powder,
+                        Yãkuãna. This is very present in the initiation of the Yanomami shamans, and should always be
+                        under the conduct of the elders.
+                    </p>
+                </article>
+            </a>
         </div>
         <div class="card">
-            <img src="../../img/Rituais/Kanela.jpg" alt="Kanela">
-            <article>
-                <h1>Kanela</h1>
-                <p>
-                    Among the Cinnamon (MA), Timbira Group, the boys are introduced in their age class
-                    through some initiation rituals. These rituals train the boys to become
-                    Warriors. Traditionally, most girls are associated to receive belts
-                    of maturity, necessary for them to marry.
-                </p>
-            </article>
+            <a href="../Conteudo/kadiweu-ritual_em.html">
+                <img src="../../img/Rituais/kadiweu.jpg" alt="Kadiwéu" style="object-position: top;">
+                <article>
+                    <h1>Kadiwéu</h1>
+                    <p>
+                        The "Bobos" (bobotegi) are characters that appear at the Ship Festival, held by the Kadiwéu.
+                        This long ritual dates back to the times of the Paraguayan War, when these people fought for Brazil.
+                    </p>
+                </article>
+            </a>
         </div>
         
     </main>
