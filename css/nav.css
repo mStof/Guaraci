@@ -6,7 +6,7 @@
 }
 :root{
   --color: #000;
-  --navBg-color: #e5c3b5;
+  --navBg-color: #f0f0f0;
 }
 
 .nav_container{
@@ -27,8 +27,9 @@
 }
 .nav_active{
   background-color: var(--navBg-color);
-  --color: #f5f5f5;
+  /* --color: #; */
   box-shadow: 0px 0px 5px 3.5px #0007;
+  opacity: .95;
 
 }
 .nav_container .nav_normal{
@@ -113,7 +114,7 @@
   display: none;
 }
 .nav_bar ul{
-  display: flex;
+  display: none;
   list-style: none;
   gap: 50px;
 }

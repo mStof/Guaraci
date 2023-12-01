@@ -1,4 +1,4 @@
-function mecanismo () {
+function scrollInSite () {
     // Add class ativa no container geral
     let nav = document.querySelector('.nav_container')
     nav.classList.toggle('nav_active', scrollY > 0)
@@ -22,4 +22,24 @@ function mecanismo () {
     navBtn.checked = scrollY > 0 ? null : false
 }
 
-document.addEventListener('scroll', mecanismo)
+function noScrollInSite() {
+    document.documentElement.style.setProperty('--color', '#f5f5f5')
+    let navLinks = document.querySelector('.nav_normal .nav_bar')
+    navLinks.classList.remove('disappear')
+
+    let navMenu = document.querySelector('.nav_normal label')
+    navMenu.classList.remove('disappear')
+
+    let lineBefore = document.styleSheets[document.styleSheets.length - 1].cssRules[8]
+    lineBefore.style.opacity = 1
+    return console.log('No scroll in site')
+}
+
+
+
+if(document.body.scrollHeight - 1 > window.innerHeight){
+    document.addEventListener('scroll', scrollInSite)
+}
+else{
+    noScrollInSite()
+}

@@ -11,8 +11,6 @@
         }
         *{margin: 0;padding: 0;}
         body{
-            padding: 0;
-            margin: 0;
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -23,6 +21,8 @@
             align-self: flex-end;
             width: 100%; 
             height: 100vh;
+            height: 100svh;
+            padding: 8rem 0px 5rem 0px;
             overflow: auto;
             position: relative;
             display: flex;
@@ -44,6 +44,7 @@
             transition: transform 300ms ease;
             text-align: center;
             display: flex;
+            align-items: center;
             flex-direction: column;
         }
        
@@ -63,19 +64,21 @@
         }
         .person__img{
             width: 130%;
+            
             position: relative;
-            margin-left: -20px;
-            transform: translateY(35px) scaleX(-1);
+            margin-left: 25px;
+            transform: translateY(25px) scaleX(-1);
             transition: transform 600ms;
         }
         .person__img:hover{
-            transform: translateY(5px) scaleX(-1);
+            transform: translateY(-0.5px) scaleX(-1);
         }
         .person__container::before{
-            content: 'Mateus Stofel Brito';
-            position: absolute;
-            inset: 0;
-            display: contents;
+            content: attr(id);
+            height: 2ch;
+            position: relative;
+            inset: 0px 0 0 0;
+            display: inline;
             font-size: 1.5rem;
         }
         .person{
@@ -85,7 +88,7 @@
             justify-content: flex-end;
         }
         .person::after{
-            content: 'Click me';
+            content: 'Clique-me';
             font-family: monospace;
             letter-spacing: 5px;
             display: inline;
@@ -133,11 +136,7 @@
 
     </style>
     <link rel="stylesheet" href="../../css/nav.css">
-    <style>
-        :root{
-            --color:#fff;
-        }
-    </style>
+
 </head>
 <body>
    
@@ -180,17 +179,18 @@
                 <ul>
                     <li><h2 class="login"><a href="../Login & Cadastro/login_cadastro_em.html">Login</a></h2></li>
                     <li><h2 class="link"><a href="../Conceito/site/index_construction.html">Concept</a></h2></li>
+                    <li><h2 class="link"><a href="../Rituais/index_rituais_em.html">Rites</a></h2></li>
                     <li><h2 class="link"><a href="../sobre/about.html">Help</a></h2></li>
                     <li><h2 class="link"><a href="../Desenvolvedores/creditos_em.html">Credits</a></h2></li>
                 </ul>
             </div>
         </div>
     </div>
-    <main>
+    <main id="creditos_container">
         <div class="person">
-            <div class="person__container">
+            <div class="person__container" id="Maria Eduarda Marques">
                 <img class="person__circle" src="../../img/Desenvolvedores/pexels-pixabay-459335.jpg" alt="" >
-                <img class="person__img" src="../../img/Desenvolvedores/Our_image/perfil.png" alt="My image" >
+                <img class="person__img" src="../../img/Desenvolvedores/Our_image/Dudão.png" alt="My image" >
             </div>
             <div class="info">
                 <a target="_blank" rel="noopener noreferrer" href="https://github.com/mStof"><img src="../../img/Desenvolvedores/Logos/github_white_logo.png" alt="Github_icon"></a>
@@ -201,9 +201,9 @@
             </div>
         </div>
         <div class="person">
-            <div class="person__container">
+            <div class="person__container" id="Mateus Stofel Brito">
                 <img class="person__circle" src="../../img/Desenvolvedores/pexels-pixabay-459335.jpg" alt="" >
-                <img class="person__img" src="../../img/Desenvolvedores/Our_image/perfil.png" alt="My image" >
+                <img class="person__img" src="../../img/Desenvolvedores/Our_image/Mstof.png" alt="My image" >
             </div>
             <div class="info">
                 <a href="https://github.com/mStof"><img src="../../img/Desenvolvedores/Logos/github_white_logo.png" alt="Github_icon"></a>
@@ -213,9 +213,9 @@
             </div>
         </div>
         <div class="person">
-            <div class="person__container">
+            <div class="person__container" id="Matheus Gajewski de Melo">
                 <img class="person__circle" src="../../img/Desenvolvedores/pexels-pixabay-459335.jpg" alt="" >
-                <img class="person__img" src="../../img/Desenvolvedores/Our_image/perfil.png" alt="My image" >
+                <img class="person__img" src="../../img/Desenvolvedores/Our_image/Lemão.png" alt="My image" >
             </div>
             <div class="info">
                 <a href="https://github.com/mStof"><img src="../../img/Desenvolvedores/Logos/github_white_logo.png" alt="Github_icon"></a>
@@ -225,27 +225,27 @@
             </div>
         </div>
         <div class="person">
-            <div class="person__container">
+            <div class="person__container" id="Paulo H. Marques Rezende">
                 <img class="person__circle" src="../../img/Desenvolvedores/pexels-pixabay-459335.jpg" alt="" >
-                <img class="person__img" src="../../img/Desenvolvedores/Our_image/perfil.png" alt="My image" >
+                <img class="person__img" src="../../img/Desenvolvedores/Our_image/Ph.png" alt="My image" >
             </div>
             <div class="info">
-                <a href="https://github.com/mStof"><img src="../../img/Desenvolvedores/Logos/github_white_logo.png" alt="Github_icon"></a>
-                <a href="https://www.instagram.com/_mstofel/"><img src="../../img/Desenvolvedores/Logos/instagram_logo.png" alt="Instagram_Icon"></a>
+                <a href="https://github.com/PH-CSS"><img src="../../img/Desenvolvedores/Logos/github_white_logo.png" alt="Github_icon"></a>
+                <a href="https://www.instagram.com/onuv3m/"><img src="../../img/Desenvolvedores/Logos/instagram_logo.png" alt="Instagram_Icon"></a>
                 <a href="https://twitter.com/_Matt231"><img src="../../img/Desenvolvedores/Logos/twitter_logo.png" alt="Twitter_icon"></a>
-                <a href="mailto:mateus.stofel.brito@gmail.com"><img src="../../img/Desenvolvedores/Logos/Email_logo.png" alt="Email_icon"></a>
+                <a href="mailto:paulohpeixinhoenrique@gmail.com"><img src="../../img/Desenvolvedores/Logos/Email_logo.png" alt="Email_icon"></a>
             </div>
         </div>
         <div class="person">
-            <div class="person__container">
+            <div class="person__container" id="Ryan Santos Silva">
                 <img class="person__circle" src="../../img/Desenvolvedores/pexels-pixabay-459335.jpg" alt="" >
-                <img class="person__img" src="../../img/Desenvolvedores/Our_image/perfil.png" alt="My image" >
+                <img class="person__img" style="margin-left: 0px;" src="../../img/Desenvolvedores/Our_image/Ryan.png" alt="My image" >
             </div>
             <div class="info">
-                <a href="https://github.com/mStof"><img src="../../img/Desenvolvedores/Logos/github_white_logo.png" alt="Github_icon"></a>
-                <a href="https://www.instagram.com/_mstofel/"><img src="../../img/Desenvolvedores/Logos/instagram_logo.png" alt="Instagram_Icon"></a>
-                <a href="https://twitter.com/_Matt231"><img src="../../img/Desenvolvedores/Logos/twitter_logo.png" alt="Twitter_icon"></a>
-                <a href="mailto:mateus.stofel.brito@gmail.com"><img src="../../img/Desenvolvedores/Logos/Email_logo.png" alt="Email_icon"></a>
+                <a href="https://github.com/darkboat4"><img src="../../img/Desenvolvedores/Logos/github_white_logo.png" alt="Github_icon"></a>
+                <a href="https://www.instagram.com/rys.xp/"><img src="../../img/Desenvolvedores/Logos/instagram_logo.png" alt="Instagram_Icon"></a>
+                <a href="https://twitter.com/ryanssilvah_"><img src="../../img/Desenvolvedores/Logos/twitter_logo.png" alt="Twitter_icon"></a>
+                <a href="mailto:rssgamer2017@gmail.com"><img style="filter: invert(100%);" src="../../img/Desenvolvedores/Logos/Email_logo.png" alt="Email_icon"></a>
             </div>
         </div>
     </main>
