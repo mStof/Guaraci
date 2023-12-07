@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enawenê-nawê - Guaraci</title>
+    <title>Document</title>
     <link rel="stylesheet" href="conteudo.css">
     <link rel="stylesheet" href="../../css/nav.css">
-
 </head>
 <body>
     <input class="nav_btn_inp" type="checkbox" name="nav_btn" id="nav_btn">
@@ -27,7 +26,7 @@
         <div class="nav_open">
             <div class="div_config">
                 <div class="mudar_idioma">
-                    <a href="enawene-nawe-ritual.html"><img src="../../img/Brazil_flag_dark.svg" alt="Brazil_flag"></a>
+                    <a href="pankararu-ritual_em.html"><img src="../../img/Brazil_flag_dark.svg" alt="Brazil_flag"></a>
                 </div>
                 <div class="mudar_modo">
                     <input type="checkbox" name="ipt_modo" id="ipt_modo">
@@ -57,24 +56,45 @@
     </div>
 
     <header>
-        <h1>ENAWENÊ-NAWÊ</h1>
+        <h1>PANKARARU</h1>
     </header>
     <main>
         <div class="shape"></div>
         <article class="first_article">
-            <h2>Yaokwa</h2>
-            <p>Yaokwa marks the dry period, during which the Enauênes-Nauês interact with beings from the underground world called Yakairiti. As these creatures suffer from insatiable hunger, they need to be fed vegetable salt, fish, corn and cassava. In exchange for the food they receive, the spirits maintain social and cosmic order.</p>
-            <img src="../../img/Conteudo/enawene-nawe-img1.png" alt="Tribu Enawenê-nawê">
-            <p>Yaokwa preparation begins in January, cassava harvest time and when Mata, a series of fishing traps, is built on the Joaquim Rios, Arimena, Rio Preto and Nhambiquara rivers. When fishing, the village is divided into nine ritual groups, according to clans. The fishermen, having removed the ornaments that identify them as human and divided into groups, then set off to camp on the banks of medium-sized rivers.</p>
+            <h2>Toré</h2>
+            <p>One of the most significant rituals for the Pankararu is the "Toré." This is a spiritual and cultural event that takes place on special occasions, such as traditional festivities, seasonal celebrations, or important milestones in the community's life. Toré is an artistic expression that incorporates dance, music, singing, and symbolism, playing a central role in Pankararu spirituality.</p>
+            <img src="../../img/Conteudo/pankararu-img1.jpg" alt="">
+            <p>The beginning of Toré is marked by the preparation of the sacred space, usually a carefully chosen courtyard, where participants gather in a circle. The dancers, dressed in colorful attire and traditional ornaments, initiate ritualistic movements accompanied by the sounds of musical instruments such as rattles and flutes.</p>
         </article>
         <article class="second_article">
-            <img src="../../img/Conteudo/enawene-nawe-img2.png" alt="Tribu Enawenê-nawê">
-            <p>After two months of fishing, at each dam an elder offers salt to a group of fishermen (representing the Yakairiti), in exchange for the fish. The consumption of salt symbolizes the pact between humans and spirits. On the way back to the village, the fishermen, once again representing beings from the underground world, face the residents who were left to tend the fields. After the ritual songs, they exchange fish for drinks prepared with cassava and corn.</p>
+            <img src="../../img/Conteudo/pankararu-img2.jpg" alt="">
+            <p>The chants sung during Toré have lyrics that narrate myths, legends, and stories significant to the Pankararu, transmitting cultural knowledge and values from generation to generation. The dances performed during the ritual have specific movements, often symbolizing the Pankararu's relationship with nature, elements, and ancestors.</p>
 
         </article>
     </main>
     <footer></footer>
 
-    <script src="../../Js/nav.js"></script>
+    <script>
+       document.addEventListener('scroll', () => {
+        // Add class ativa no container geral
+        let nav = document.querySelector('.nav_container')
+        nav.classList.toggle('nav_active', scrollY > 0)
+
+        // remove a class para aparecer os links
+        let navLinks = document.querySelector('.nav_normal .nav_bar')
+        navLinks.classList.toggle('disappear', scrollY == 0)
+        
+        // remove a class para aparecer o menu
+        let navMenu = document.querySelector('.nav_normal label')
+        navMenu.classList.toggle('disappear', scrollY == 0)
+        
+        // add a linha pra separar
+        let lineBefore = document.styleSheets[1].cssRules[8]
+        lineBefore.style.opacity = (scrollY > 0) ? 1 : 0
+
+        let navBtn = document.getElementById('nav_btn')
+        navBtn.checked = scrollY > 0 ? null : false
+       }) 
+    </script>
 </body>
 </html>

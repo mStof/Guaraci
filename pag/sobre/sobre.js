@@ -1,4 +1,22 @@
 
+
+
+
+var button = document.getElementById('More');
+
+    button.addEventListener('click', function(){
+
+        var card = document.querySelector('.card');
+
+            card.classList.toggle('ativo');
+
+                if (card.classList.contains('ativo')){
+                    return button.textContent = 'Ler menos';
+                }
+
+                button0.textContent = 'Ler mais';
+    })
+
 //1 
 var button0 = document.getElementById('More0');
 
@@ -51,4 +69,33 @@ var button0 = document.getElementById('More0');
                 button2.textContent = 'Ler mais';
     })
 
+
+
+
+    var button3 = document.getElementById('More3');
+
+    button3.addEventListener('click', function(){
+
+        var card3 = document.querySelector('.card3');
+
+            card3.classList.toggle('ativo3');
+
+                if (card3.classList.contains('ativo3')){
+                    return button3.textContent = 'Ler menos';
+                }
+
+                button2.textContent = 'Ler mais';
+    })
+
+
+    var tabelaB = document.getElementById('More3');
+
+    tabelaB.addEventListener('click', function(){
+
+        var card3Tab = document.querySelector('.tabela');
+
+            card3Tab.classList.toggle('tabAtiva');
+
+
+    })
     
