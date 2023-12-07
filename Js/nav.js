@@ -35,9 +35,10 @@ function noScrollInSite() {
     return console.log('No scroll in site')
 }
 
-
-
-if(document.body.scrollHeight - 1 > window.innerHeight){
+let body = document.body, html = document.documentElement;
+const docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+console.log(docHeight)
+if(docHeight > window.innerHeight){
     document.addEventListener('scroll', scrollInSite)
 }
 else{
