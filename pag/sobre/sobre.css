@@ -15,7 +15,7 @@
 
 body{
     font-family: Comfortaa;
-    
+    overflow-x:hidden ;
 }
 
 
@@ -313,7 +313,7 @@ h1{
                     .tab{
                         display: flex;
                         width: 220px;
-                        height: 320px;
+                        height: 330px;
                         flex-direction: column;
                         border: 1px solid black;
                         margin-bottom: 4%;
@@ -690,53 +690,8 @@ h1{
       height: 70vh;
   }
 
-  .fog{
-    height: 70px;
-   
-    
-}
-
-.terr{
-    height: 70px;                         
-                             
-}
-
-.agua{
-    height: 70px;                        
-                          
-}
-
-.ar{
-    height: 70px;     
-                           
-}
- 
-  .tabela{
-    transition: all 0.5s;
-    height: auto;
-    width: 320px;
-    display: flex;
-    opacity: 0;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 10%;
-    margin-left: -5%;
-    background-color: transparent;
-    
-}
-
-  .tab{
-    margin-bottom: 4%;
-    margin-left: 4%;
-    display: flex;
-    width: 140px;
-    height: 320px;
-    flex-direction: column;
-    border: 1px solid black;
-    
-    
-}
+  
+  
 
   .imagem_lo-fi_png{
       margin-left: 22vw;
@@ -749,6 +704,57 @@ h1{
   .card, .card0, .card1, .card2, .card3{
     width: 300px;
   }
+}
+
+@media screen and (max-width:700px){
+    .fog{
+        height: 70px;
+       
+        
+    }
+    
+    .terr{
+        height: 70px;                         
+                                 
+    }
+    
+    .agua{
+        height: 70px;                        
+                              
+    }
+    
+    .ar{
+        height: 70px;     
+                               
+    }
+     
+      .tabela{
+        transition: all 0.5s;
+        height: auto;
+        width: 320px;
+        display: flex;
+        opacity: 0;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 10%;
+        margin-left: -5%;
+        background-color: transparent;
+        
+    }
+    
+      .tab{
+        margin-bottom: 4%;
+        margin-left: 4%;
+        display: flex;
+        width: 140px;
+        height: 320px;
+        flex-direction: column;
+        border: 1px solid black;
+        
+        
+    }
+    
 }
 
 
