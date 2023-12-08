@@ -15,91 +15,84 @@ body{
 .cabecalho{
 
     display: flex;
-    /* height: 100vh; */
+    width: 100%;
+    height: 100vh;
     background-color: #9b816c;
     border-bottom: solid 15px #9b816c;
     border-radius: 15px;
     border: 0.2px transparent #74695e;
-    overflow-x: hidden;
 }
 
 .txt{
     height: 100%;
     width: 50%;
     background-color: #9b816c;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-sizing: border-box;
-    gap: 50px;
-    padding: 50px;
+    
+margin-top: -100px;
+    
 }
-.txt h1{
-    color: #ffe5c9;
-    font-family: 'Roboto', sans-serif;
-    font-size:clamp(2.5rem, 5vw + 1rem, 7rem);
-    /* margin-top: 20%;  */
-    /* margin-left: 5%; */
-    /* display: block;       */
-    width: 80%;
-}
+        .txt h1{
+            color: #ffe5c9;
+            font-family: 'Roboto', sans-serif;
+            font-size:7rem;
+            margin-left: 4%;
+            margin-top: 20%;   
+            display: inline-block;      
+        }
 
-.txt h1::after{
-    content:"";
-    width: 80%;
-    display: block;
-    border-bottom: 7px solid #ffe5c9;
-    border-radius: 50px;
-}
+        .txt h1::after{
+            content:"";
+            display: block;
+            border-bottom: 7px solid #ffe5c9;
+            border-radius: 50px;
+        }
 
-.txt h2{
-    align-self: flex-end;
-    color:#ffe5c9 ;
-    font-size: clamp(1rem, 5vw + 1rem, 2rem);
-    /* margin-left: 45%; */
-    /* margin-top: 13%; */
-    font-family: 'Roboto', sans-serif;
-}
+        .txt h2{
+            color:#ffe5c9 ;
+            font-size: 2rem;
+            margin-left: 45%;
+            margin-top: 13%;
+            font-family: 'Roboto', sans-serif;
+        }
 
-.txt h2::after{
-    content:"";
-    display: block;
-    border-bottom: 3px solid #ffe5c9;
-    border-radius: 50px;
-}
+        .txt h2::after{
+            content:"";
+            display: block;
+            border-bottom: 3px solid #ffe5c9;
+            border-radius: 50px;
+        }
 
-.txt h3{
-    align-self: flex-end;
-    color: white;
-    font-weight: bold;
-    font-size: clamp(1rem, 5vw + 1rem,1.4rem);
-    /* margin-top: 1%; */
-    /* margin-left: 47%; */
-    /* width: 50%; */
-    text-align: right;
-    font-family: 'Comfortaa', sans-serif;
-}
+        .txt h3{
+            color: white;
+            font-weight: bold;
+            font-size: 1.4rem;
+            margin-top: 1%;
+            margin-left: 47%;
+            width: 50%;
+            text-align: right;
+            font-family: 'Comfortaa', sans-serif;
+        }
 
 
-.aql{
-    position: absolute;
-    margin-left: -500px;
-    width: 80vw;
-    height: 100vh;
-    background-color:#9b816c ;
-}
+        .aql{
+            position: absolute;
+            margin-left: -500px;
+            width: 80vw;
+            height: 100vh;
+            background-color:#9b816c ;
+        }
 
 
 
 .img{
-width: 50%;
-height: 100vh;
-background-color: #5AB36A;
-}
-.img img{
+    background-image: url(../Tela\ index.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
     height: 100%;
-    width: 100%;
-    object-fit: cover;
+    width: 50%;
+    background-color: #5AB36A;
+    opacity: 1;
 }
 
 
@@ -251,18 +244,18 @@ background-color: #5AB36A;
 
 @media screen and (min-width:1588px){
     .txt h2 {
-        /* margin-top: 15%; */
+        margin-top: 15%;
     }
 
 }
 
     @media screen and (max-width:1432px){
         .txt h2{
-            /* margin-left: 38%; */
+            margin-left: 38%;
         }
 
         .txt h3{
-            /* margin-left:39% ; */
+            margin-left:39% ;
         }
 
         
@@ -282,9 +275,11 @@ background-color: #5AB36A;
     }
 
     .txt h2{
-        /* margin-top: 20px; */
+        margin-top: 20px;
     }
-
+    .txt h1{
+        font-size: 4rem;
+    }
 
     .txt{
         width: 100%;
@@ -332,29 +327,35 @@ background-color: #5AB36A;
        height: 50px;
     }
 
+    .mais{
+        margin-left: 30vw;
+        
+
+    }
+
+}
+@media screen and (max-height:771px)
+{
+    .txt h1{
+        font-size: 5rem;
+    }
 }
 
-
 @media screen and (max-width:717px) {
-    .txt{
-        justify-content: center;
-        gap: 25px;
-    }
     .txt h2{
         color:#d1d1d1 ;
-        /* font-size: 2rem; */
-        /* margin-left:6%; */
-        /* margin-top: 16%; */
+        font-size: 2rem;
+        margin-left:6%;
+        margin-top: 16%;
     }
 
     .txt h3{
         color: white;
         font-weight: bold;
-        text-align: left;
-        /* font-size: 1.4rem; */
-        /* margin-top: 1%; */
-        /* margin-left: 1%; */
-        /* width: 80%; */
+        font-size: 1.4rem;
+        margin-top: 1%;
+        margin-left: 1%;
+        width: 80%;
     }
     .texto{
         font-size: 1rem;
@@ -366,9 +367,10 @@ background-color: #5AB36A;
         body{
             width:451px ;
         }
+
 }
 
-@media screen and(max-width:490px){
+@media screen and(max-width:490){
     .texto{
         font-size: 0.7rem;
     }
